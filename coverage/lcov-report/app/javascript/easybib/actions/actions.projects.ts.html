@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/actions/actions.projects.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/actions</a> actions.projects.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/120</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/98</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/102</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { setCurrentProject, mergeDataAndLinks } from 'redux-citation-api'
+import * as constants from 'easybib/constants'
+<span class="cstat-no" title="statement not covered" >import { fetchUser } from 'easybib/utils/utils'</span>
+import { displayError } from './actions.errors'
+import { redirectToHomePage } from './actions.redirects'
+<span class="cstat-no" title="statement not covered" >import requestWithCredentials from '../utils/api</span>'
+import { EasybibThunkAction } from 'types/easybibRedux'
+const currentDate = new <span class="cstat-no" title="statement not covered" >Date().toLocaleDateString()</span>
+&nbsp;
+/**<span class="cstat-no" title="statement not covered" ></span>
+ * Create a new bibliography|project.
+ * @param {st<span class="cstat-no" title="statement not covered" >ring} style - bibliography styl</span>e
+ * @uses dataApi.createProject()
+ */<span class="cstat-no" title="statement not covered" ></span>
+const createProject = (style: string): EasybibThunkAction&lt;void&gt; =&gt; (
+  dispatch,<span class="cstat-no" title="statement not covered" ></span>
+  getState,
+  { dataApi<span class="cstat-no" title="statement not covered" > }</span>
+) =&gt; {
+  const s<span class="fstat-no" title="function not covered" >houldProjectBePublic = </span>getStat<span class="cstat-no" title="statement not covered" >e().user.loggedIn === false</span>
+  dataApi
+    .crea<span class="fstat-no" title="function not covered" >teProject(<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span>
+      `${constants.PROJECT_NAME} ${currentDate}`,
+      style,<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >      shouldProjectBePublic<span class="fstat-no" title="function not covered" ></span></span>
+    )<span class="fstat-no" title="function not covered" ></span>
+    .t<span class="cstat-no" title="statement not covered" >hen(</span>
+      as<span class="cstat-no" title="statement not covered" >ync response =&gt; {</span>
+        const project = mergeDataAndLinks(response)
+<span class="cstat-no" title="statement not covered" >        await reque</span>stWithCredentials('/api/session_project', 'POST', {
+          projectId: project.id,
+        })
+        await fetchUser()
+        dispa<span class="fstat-no" title="function not covered" >tch(setCu</span>rrentProject(project))
+<span class="cstat-no" title="statement not covered" >      },</span>
+      e <span class="cstat-no" title="statement not covered" >=&gt; dispatch(displayError(constant</span>s.CREATE_PROJECT_ERROR, e))
+    )
+}<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+/**
+ * Initlialize|load bibliography or create a new one if needed.
+ * Used on Fo<span class="fstat-no" title="function not covered" >rmPag</span>e
+ * @pa<span class="cstat-no" title="statement not covered" >ram {string} style<span class="fstat-no" title="function not covered" ></span></span>
+ * @para<span class="cstat-no" title="statement not covered" >m  {string} projectId -</span> bibliography id
+ * @uses dataApi.getProject()
+ */
+export const initProject = (
+  st<span class="cstat-no" title="statement not covered" >yle: string = 'mla8',</span>
+  projectId: string
+): EasybibThunkAction&lt;void&gt; =&gt; (dispatch, getState, { dataApi }) =&gt; {
+  if (!projectId) return dispatch(createProject(style))
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  return d<span class="cstat-no" title="statement not covered" >ataApi.getProject(projectId).then(</span>
+    projectData =&gt; {
+      const project<span class="fstat-no" title="function not covered" > = me</span>rgeDataAndLinks(projectData)
+<span class="cstat-no" title="statement not covered" >      dispatch(setCu<span class="cstat-no" title="statement not covered" >rrentProject</span></span>(project))
+    },<span class="cstat-no" title="statement not covered" ></span>
+    e =&gt; {
+      if (
+        e.message &amp;&amp;
+        e.message.msg &amp;&amp;
+        e.message.msg.includes('Not enough permissions for this project')
+      ) {
+        redirectToHomePage()
+      } else dispatch(displayError(constants.GET_PROJECT_ERROR, e))
+<span class="cstat-no" title="statement not covered" >    }</span>
+  )
+}
+&nbsp;
+export default initProject<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:57 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

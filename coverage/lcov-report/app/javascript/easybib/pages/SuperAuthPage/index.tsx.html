@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/SuperAuthPage/index.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/SuperAuthPage</a> index.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/147</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/129</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/129</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import { connect } from 'react-redux'
+<span class="cstat-no" title="statement not covered" >import styled from 'styled-components'</span>
+&nbsp;
+import isWindowDefined from 'easybib/utils/isWindowDefined'
+<span class="cstat-no" title="statement not covered" >import { getUserBibInfo } from 'easybib/utils/loca</span>lStorage'
+import { loadCheggSuperAuth } from 'easybib/utils/cheggauth'
+import initGT<span class="cstat-no" title="statement not covered" >M from 'easybib/utils/initGTM'</span>
+&nbsp;
+import ModalWrappe<span class="cstat-no" title="statement not covered" >r from 'easybib/organis</span>ms/ModalWrapper'
+import withReduxProvider from 'easybib/hocs/withReduxProvider'
+<span class="cstat-no" title="statement not covered" ></span>
+import { initUser } from 'easybib/actions/actions.shared'
+import { showModal } fr<span class="cstat-no" title="statement not covered" >om 'easybib/actions/actions.modals'</span>
+&nbsp;
+const Container = st<span class="cstat-no" title="statement not covered" >yled.div`</span>
+  padding: 12px;
+  margin-bottom: <span class="cstat-no" title="statement not covered" >16px;</span>
+  background: white;
+`<span class="cstat-no" title="statement not covered" ></span>
+const EasybibLogo = styled.img.attrs({
+  src: '/v2/images/e<span class="cstat-no" title="statement not covered" >asybib-chegg-logo.svg',</span>
+  alt: 'EasyBib',
+})`<span class="cstat-no" title="statement not covered" ></span>
+  width: 111px;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+interface Props <span class="cstat-no" title="statement not covered" >{</span>
+  showSubModal: (options: {}) =&gt; void
+  redirec<span class="fstat-no" title="function not covered" >tTo: string<span class="cstat-no" title="statement not covered" ></span></span>
+  showValueprop?: boolean
+  default<span class="fstat-no" title="function not covered" >flow: string<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span>
+  initUser: () =&gt; void
+  pageName?: string<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  ocVersion: string</span>
+  cl<span class="cstat-no" title="statement not covered" >ient: any</span>
+  plusTest?: boolean
+  response_type: string
+}
+<span class="cstat-no" title="statement not covered" ></span>
+export class SuperAuthPage extends Component&lt;Props&gt; {
+  async componentDidMount() {
+<span class="cstat-no" title="statement not covered" >    initGTM()</span>
+&nbsp;
+    await this.props.initUser()
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+    const {<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >      showSubModal,</span>
+      defaultflow,
+      redirectTo,<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >      showValueprop,</span>
+      cli<span class="fstat-no" title="function not covered" >en</span>t,
+<span class="cstat-no" title="statement not covered" >      pageName,</span>
+      pl<span class="cstat-no" title="statement not covered" >usTest,<span class="cstat-no" title="statement not covered" ></span></span>
+      ocVersion,
+      // eslint-disable-next-line camelcase
+      response_type,
+<span class="cstat-no" title="statement not covered" >    } = this.props</span>
+    const { loggedIn, user } = getUserBibInfo()
+    if (loggedIn &amp;&amp; !user.paidMember) {
+<span class="cstat-no" title="statement not covered" >      sho<span class="fstat-no" title="function not covered" >wS</span>ubModal({ plusTest })</span>
+<span class="cstat-no" title="statement not covered" >    } else if (loggedIn &amp;&amp;</span> user.paidMember) {
+      window.location.href = '/myaccount'
+    } else {<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >      let accurateRedirectTo</span> = redirectTo
+      if (
+        (pageName === 'upgrade' &amp;&amp; !loggedIn) ||
+<span class="cstat-no" title="statement not covered" >        (pageName === 'register' &amp;&amp; plusTest)</span>
+      ) {
+        accurateRedirectTo = '/upgrade'
+      }
+      loadCheggS<span class="cstat-no" title="statement not covered" >uperAuth({<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        // eslint-disable-next-lin<span class="fstat-no" title="function not covered" >e </span>camelcase</span>
+        super<span class="fstat-no" title="function not covered" >Auth: { de</span>faultflow, response_type },
+<span class="cstat-no" title="statement not covered" >        options: {</span>
+<span class="cstat-no" title="statement not covered" >          showSubModal,</span>
+          showValueprop,
+<span class="cstat-no" title="statement not covered" >          client,</span>
+          ocVersion,
+          redirectTo: accurateRedirectTo,
+        },
+      })<span class="fstat-no" title="function not covered" ></span>
+    }<span class="cstat-no" title="statement not covered" ></span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+  render<span class="cstat-no" title="statement not covered" >() {</span>
+    return (
+      &lt;Container&gt;
+        &lt;EasybibLogo /&gt;
+        {isWi<span class="fstat-no" title="function not covered" >ndowD</span>efined &amp;&amp; &lt;ModalWrapper /&gt;}
+<span class="cstat-no" title="statement not covered" >      &lt;/Container&gt;<span class="fstat-no" title="function not covered" ></span></span>
+    )<span class="cstat-no" title="statement not covered" ></span>
+  }
+}
+&nbsp;
+cons<span class="cstat-no" title="statement not covered" >t mapDispatchToProps = dispatch =&gt; ({</span>
+  showSubModal: options =&gt; dispatch(showModal('subscription', options)),
+  initUser: async () =&gt; {
+    await dispatch(initUser())
+  },<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+})<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+export default with<span class="fstat-no" title="function not covered" >Redux</span>Provider(
+  conn<span class="cstat-no" title="statement not covered" >ect(<span class="cstat-no" title="statement not covered" ></span></span>
+    nu<span class="cstat-no" title="statement not covered" >ll,</span>
+    mapDispatchToProps
+  )(SuperAuthPage)
+)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

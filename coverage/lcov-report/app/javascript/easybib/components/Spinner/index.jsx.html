@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/components/Spinner/index.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/components/Spinner</a> index.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/0</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+<span class="fstat-no" title="function not covered" >import PropTypes from 'prop-types'</span>
+import styled, { keyframes } from 'styled-components'
+&nbsp;
+const rotate360 = keyframes`
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+`
+&nbsp;
+export const SpinnerWrapper = styled.svg.attrs({
+  viewBox: props =&gt; `0 0 ${props.size} ${props.size}`,
+  xmlns: 'http://www.w3.org/2000/svg',
+})`
+  fill: inherit;
+  color: inherit;
+  animation: ${rotate360} 1.75s infinite linear;
+  width: ${props =&gt; props.size}px;
+  height: ${props =&gt; props.size}px;
+`
+&nbsp;
+SpinnerWrapper.defaultProps = {
+  size: 48,
+}
+&nbsp;
+SpinnerWrapper.propTypes = {
+  size: PropTypes.number,
+}
+export const Path = styled.path.attrs({
+  d:
+    'm 24.080469,44.320312 c -2.297709,0 -4.199999,-1.902292 -4.2,-4.2 0,-2.297711 1.902291,-4.2 4.2,-4.2 2.297708,0 4.2,1.902289 4.2,4.2 0,2.297708 -1.902292,4.2 -4.2,4.2 z m 11.640624,-4.399999 c -2.735368,0 -4.999997,-2.264632 -5,-5 0,-2.735372 2.264632,-5.000001 5,-5.000001 2.73537,0 5,2.264629 5,5.000001 0,2.735368 -2.264631,5 -5,5 z m -23,-0.960938 c -2.056996,0 -3.7609348,-1.702381 -3.7609372,-3.759374 0,-2.056999 1.7039412,-3.760939 3.7609372,-3.760939 2.056996,0 3.759376,1.703939 3.759376,3.760939 0,2.056994 -1.70238,3.759374 -3.759376,3.759374 z M 7.3601562,26.479687 c -1.750634,0 -3.199998,-1.449366 -3.2,-3.199999 0,-1.750636 1.449366,-3.2 3.2,-3.2 1.750634,0 3.1999998,1.449364 3.1999998,3.2 0,1.750633 -1.4493658,3.199999 -3.1999998,3.199999 z m 33.2796878,0 c -1.750635,0 -3.199999,-1.449366 -3.2,-3.199999 0,-1.750636 1.449365,-3.2 3.2,-3.2 1.750633,0 3.2,1.449364 3.2,3.2 0,1.750633 -1.449367,3.199999 -3.2,3.199999 z M 12.160156,14.559374 c -1.750634,0 -3.1999978,-1.449366 -3.2000002,-3.2 0,-1.7506355 1.4493662,-3.1999993 3.2000002,-3.1999993 1.750634,0 3.2,1.4493638 3.2,3.1999993 0,1.750634 -1.449366,3.2 -3.2,3.2 z m 23.840625,0 c -1.750634,0 -3.199998,-1.449366 -3.2,-3.2 0,-1.7506355 1.449366,-3.1999993 3.2,-3.1999993 1.750634,0 3.2,1.4493638 3.2,3.1999993 0,1.750634 -1.449366,3.2 -3.2,3.2 z M 24.080469,10.079687 c -1.750634,0 -3.199998,-1.4493667 -3.2,-3.1999995 0,-1.750636 1.449365,-3.2 3.2,-3.2 1.750634,0 3.2,1.449364 3.2,3.2 0,1.7506328 -1.449366,3.1999995 -3.2,3.1999995 z',
+  fill: props =&gt; props.color || props.theme.colors.blue,
+})`
+  color: inherit;
+`
+&nbsp;
+const Spinner = props =&gt; (
+  &lt;SpinnerWrapper {...props}&gt;
+    &lt;Path /&gt;
+  &lt;/SpinnerWrapper&gt;
+)
+&nbsp;
+Spinner.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.number,
+}
+&nbsp;
+export default Spinner
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:11:12 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

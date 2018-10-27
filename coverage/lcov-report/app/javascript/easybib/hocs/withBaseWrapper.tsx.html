@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/hocs/withBaseWrapper.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/hocs</a> withBaseWrapper.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import Advert from 'easybib/atoms/Advert'
+<span class="cstat-no" title="statement not covered" >import AppHeader from 'easybib/components/AppHeader'</span>
+import Footer from 'easybib/molecules/Footer'
+import styled from 'styled-components'
+<span class="cstat-no" title="statement not covered" ></span>
+import initGTM from 'easybib/utils/initGTM'
+import initHo<span class="cstat-no" title="statement not covered" >tjar from 'easybib/utils/initHotjar'</span>
+&nbsp;
+import withThe<span class="cstat-no" title="statement not covered" >meProvider from './withThemeProvider'</span>
+import withReduxProvider from './withReduxProvider'
+<span class="cstat-no" title="statement not covered" ></span>
+const Main = styled.main`
+  border-top: <span class="cstat-no" title="statement not covered" >1px solid #ededed;</span>
+`
+<span class="cstat-no" title="statement not covered" ></span>
+interface CenterNodeProps {
+  children: JSX<span class="cstat-no" title="statement not covered" >.Element</span>
+}
+<span class="cstat-no" title="statement not covered" ></span>
+const CenterNode: React.SFC&lt;CenterNodeProps&gt; = props =&gt; (
+  &lt;main id="easybib-conte<span class="cstat-no" title="statement not covered" >nt"&gt;</span>
+    &lt;div className="eb-site-container"&gt;
+      &lt;Advert placement="<span class="cstat-no" title="statement not covered" >T1" className="adds top" /&gt;</span>
+      &lt;div className="eb-container"&gt;
+        &lt;<span class="fstat-no" title="function not covered" >div className="adds lef</span>t"&gt;<span class="cstat-no" title="statement not covered" ></span>
+          &lt;Advert placement="L1" /&gt;
+          &lt;Advert placement<span class="cstat-no" title="statement not covered" >="L2" /&gt;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;div className="center"&gt;</span>
+          &lt;Main id="main-content"&gt;{props.children}&lt;/Main&gt;
+        &lt;/div&gt;
+        &lt;div className="adds right"&gt;
+<span class="cstat-no" title="statement not covered" >          &lt;Advert plac</span>ement="R1" /&gt;
+          &lt;Advert placement="R2" /&gt;
+          &lt;Advert placement="R3" /&gt;
+<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+)<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ></span>
+interface WrappedProps {
+  url: string<span class="fstat-no" title="function not covered" ></span>
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="fstat-no" title="function not covered" ></span>
+functi<span class="cstat-no" title="statement not covered" >on withBaseWrapper(Component, initAction?) {</span>
+  class <span class="cstat-no" title="statement not covered" >Wrapped extends React.Com<span class="cstat-no" title="statement not covered" >ponent&lt;Wrappe</span></span>dProps&gt; {
+    componentDidMount() {
+      initGTM()
+      initHotjar()
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    render() {
+<span class="cstat-no" title="statement not covered" >      ret<span class="fstat-no" title="function not covered" >ur</span>n (</span>
+<span class="cstat-no" title="statement not covered" >        &lt;React.Fragment&gt;</span>
+          &lt;AppHeader withOutRouter /&gt;
+          &lt;Ce<span class="fstat-no" title="function not covered" >nte</span>rNode&gt;
+<span class="cstat-no" title="statement not covered" >            &lt;Component {...t</span>his.props} /&gt;
+          &lt;/CenterNode&gt;
+          &lt;div id="easybib-bottom-add" /&gt;
+<span class="cstat-no" title="statement not covered" >          &lt;footer id="easybib_footer"&gt;</span>
+            &lt;Footer /&gt;
+            &lt;Advert placement="D_SKIN" /&gt;
+            &lt;Advert placement="D_SB" /&gt;
+            &lt;Ad<span class="cstat-no" title="statement not covered" >vert placement="D_MISC" /&gt;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >          &lt;/footer&gt;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        &lt;/React.Fragment&gt;</span>
+<span class="cstat-no" title="statement not covered" >      )</span>
+    }
+  }<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+  return withThemeProvider(withReduxProvider(Wrapped, initAction))
+}
+&nbsp;
+expo<span class="cstat-no" title="statement not covered" >rt default</span> withBaseWrapper
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

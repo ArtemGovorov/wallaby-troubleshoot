@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/App.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages</a> App.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/65</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/53</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import { Route, Switch } from 'react-router'
+<span class="cstat-no" title="statement not covered" ></span>
+import { ThemeProvider } from 'styled-components'
+import { easybibTheme } from 'easybib/theme'
+<span class="cstat-no" title="statement not covered" ></span>
+import { Provider } from 'react-redux'
+import store <span class="cstat-no" title="statement not covered" >from 'easybib/store'</span>
+&nbsp;
+import initGTM from<span class="cstat-no" title="statement not covered" > 'easybib/utils/initGTM'</span>
+import initHotjar from 'easybib/utils/initHotjar'
+import isWindowDefined f<span class="cstat-no" title="statement not covered" >rom 'easybib/utils/isWindowDe</span>fined'
+import {
+  init as wta<span class="cstat-no" title="statement not covered" >Init,</span>
+  AnalyticsClientConfig,
+} from 'easybib/ut<span class="cstat-no" title="statement not covered" >ils/analyticsFrontendAd</span>apter'
+&nbsp;
+import Advert<span class="cstat-no" title="statement not covered" > from 'easybib/atoms/Advert'</span>
+import AppHeader from 'easybib/components/AppHeader'
+import Footer f<span class="cstat-no" title="statement not covered" >rom 'easybib/molecules/Footer'</span>
+&nbsp;
+import Home from '<span class="cstat-no" title="statement not covered" >easybib/pages/Home'</span>
+import Style from 'easybib/pages/Style'
+import ResultsConnected<span class="cstat-no" title="statement not covered" > from 'easybib/pages/Results'</span>
+import EvalConnected from 'easybib/pages/Eval'
+import FormConnected from 'easyb<span class="cstat-no" title="statement not covered" >ib/pages/Form'</span>
+import BibliographyConnected from 'easybib/pages/Bibliography'
+import initSen<span class="cstat-no" title="statement not covered" >try from 'easybib/utils/initSentry'</span>
+&nbsp;
+import EBRouter f<span class="cstat-no" title="statement not covered" >rom 'easybib/EBRouter'</span>
+import { BackendOpts } from 'types/easybib'
+import CenterN<span class="cstat-no" title="statement not covered" >ode from './CenterNode'</span>
+&nbsp;
+interface Ap<span class="cstat-no" title="statement not covered" >pProps {</span>
+  url: string
+  backendOpts<span class="cstat-no" title="statement not covered" >?: BackendOpts</span>
+}
+<span class="cstat-no" title="statement not covered" ></span>
+class App extends Component&lt;AppProps&gt; {
+  constructo<span class="cstat-no" title="statement not covered" >r(props) {</span>
+    super(props)
+    if (isWi<span class="cstat-no" title="statement not covered" >ndowDefined) {</span>
+      const wtaConfig: AnalyticsClientConfig = {}
+      wtaInit(wtaCon<span class="cstat-no" title="statement not covered" >fig)</span>
+    }
+  }<span class="cstat-no" title="statement not covered" ></span>
+  componentDidMount() {
+    initGTM()<span class="cstat-no" title="statement not covered" ></span>
+    initSentry()
+    initHotjar()<span class="cstat-no" title="statement not covered" ></span>
+  }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  render() {
+    retur<span class="fstat-no" title="function not covered" >n (<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span>
+      &lt;EBRouter url={this.props.url} backendOpts={this.props.backendOpts}&gt;
+        &lt;ThemePr<span class="cstat-no" title="statement not covered" >ovider theme={easybibTheme}&gt;<span class="fstat-no" title="function not covered" ></span></span>
+          &lt;Provider sto<span class="cstat-no" title="statement not covered" >re={store<span class="fstat-no" title="function not covered" >}&gt;</span></span>
+<span class="cstat-no" title="statement not covered" >            &lt;React.Fragment&gt;</span>
+              &lt;AppHeader withOutRouter={false} /&gt;
+              &lt;CenterNode&gt;<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                &lt;Switch</span>&gt;
+<span class="fstat-no" title="function not covered" ></span>                  &lt;Route path="/home" component={Home} /&gt;
+<span class="cstat-no" title="statement not covered" >                  &lt;Route path="/style" component={Style} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;Route path="/s<span class="cstat-no" title="statement not covered" >tyle/:style?/</span></span>:item_type?-citation" component={Style} /&gt;
+                  &lt;Route
+                    path="/:style/:item_type?-citation/search"
+                    component={ResultsConnected}
+<span class="cstat-no" title="statement not covered" >                  /&gt;</span>
+                  &lt;Route
+                    path="/:style/:item_type?-citation/eval"
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>                    component={EvalConnected}</span>
+<span class="cstat-no" title="statement not covered" >                  /&gt;</span>
+                  &lt;Route
+<span class="fstat-no" title="function not covered" ></span>                    path="/:style/:item_type?-citation/new"
+<span class="cstat-no" title="statement not covered" >                    componen</span>t={FormConnected}
+                  /&gt;
+                  &lt;Route
+<span class="cstat-no" title="statement not covered" >                    path="/:style-format/:item_type-citation"</span>
+                    component={FormConnected}
+                  /&gt;
+                  &lt;Route
+                    path="/:style-format/:item_type-citation/pubtab/:tab_id"
+                    component={FormConnected}
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>                  /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;Route p</span>ath="/cite/form" component={FormConnected} /&gt;
+                  &lt;Route path="/project" component={BibliographyConnected} /&gt;
+<span class="fstat-no" title="function not covered" ></span>                  &lt;Route path="/project/style/:style" component={BibliographyConnected} /&gt;
+<span class="cstat-no" title="statement not covered" >                  &lt;Route component={Home} /&gt;</span>
+                &lt;/Switch&gt;
+<span class="cstat-no" title="statement not covered" >              &lt;/CenterNode&gt;</span>
+              &lt;div id=<span class="cstat-no" title="statement not covered" >"ea</span>sybib-bottom-add" /&gt;
+<span class="cstat-no" title="statement not covered" >              &lt;footer id="easybib_footer"&gt;</span>
+                &lt;Footer /&gt;
+                &lt;Advert placement="D_SKIN" /&gt;
+<span class="cstat-no" title="statement not covered" >                &lt;A</span>dvert placement="D_SB" /&gt;
+                &lt;Advert placement="D_MISC" /&gt;
+              &lt;/footer&gt;
+<span class="cstat-no" title="statement not covered" >            &lt;/React.Fragment&gt;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >          &lt;/Provider&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;/ThemeProvider&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/EBRouter&gt;</span>
+    )
+  }
+}<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ></span>
+export default App
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

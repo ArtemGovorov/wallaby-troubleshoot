@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/Home/OnlineWritingHub.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/Home</a> OnlineWritingHub.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/38</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import styled from 'styled-components'
+<span class="cstat-no" title="statement not covered" >import { media } from 'easybib/theme'</span>
+&nbsp;
+import Button from 'easybib/components/Button'
+<span class="cstat-no" title="statement not covered" >import Card from 'easybib/</span>components/Card'
+import { H1 } from 'easybib/components/Heading'
+import { Pill<span class="cstat-no" title="statement not covered" >Badge } from 'easybib/components/Badge'</span>
+import Box from 'easybib/components/Box'
+import { tagCtaMain, tag<span class="cstat-no" title="statement not covered" >CtaLegacy } from 'easybib/utils/gtm'</span>
+&nbsp;
+const PaddedC<span class="cstat-no" title="statement not covered" >ard = styled(Card)`</span>
+  margin: ${props =&gt; props.theme.spacing.lg};
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const FlexRo<span class="cstat-no" title="statement not covered" >w = styled.div`</span>
+  display: flex;
+  flex-directio<span class="cstat-no" title="statement not covered" >n: row;</span>
+`
+<span class="cstat-no" title="statement not covered" ></span>
+const FlexColumn = styled.div`
+  display: <span class="cstat-no" title="statement not covered" >flex;</span>
+  flex-direction: column;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const Fle<span class="fstat-no" title="function not covered" >xHalf = styled(FlexColu</span>mn)`<span class="cstat-no" title="statement not covered" ></span>
+  flex-basis: 0;
+  flex-grow: 1;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  display: flex;</span>
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const BlueBox = styled.div`
+  background-color: ${props =&gt; props.theme.colors.blue};
+  co<span class="cstat-no" title="statement not covered" >lor: ${props =&gt; pr</span>ops.theme.colors.white};
+  padding: 12px;
+  border-radius: ${props =&gt; props.theme.borderRadius};
+<span class="cstat-no" title="statement not covered" >  position: relat</span>ive;
+  margin-left: 45px;
+  z-index: 1;
+`<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const BlueArrow = styled.img`
+  position: absolute;
+  left: -80px;<span class="cstat-no" title="statement not covered" ></span>
+  width: 94px;
+  height: 53px;<span class="cstat-no" title="statement not covered" ></span>
+  z-index: -1;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const BlueBoxC<span class="cstat-no" title="statement not covered" >ontainer = styled.div`<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  flex-basis: 0;</span>
+  f<span class="fstat-no" title="function not covered" >le</span>x-grow: 1;
+<span class="cstat-no" title="statement not covered" >  @media only screen and (max-width</span>: 900px) {
+<span class="fstat-no" title="function not covered" >    d</span>isplay: none;
+<span class="cstat-no" title="statement not covered" >  }</span>
+`
+&nbsp;
+const TopButtonC<span class="cstat-no" title="statement not covered" >ontainer = styled.div`</span>
+  padding: 4px;
+  margin-bottom: 16px;<span class="cstat-no" title="statement not covered" ></span>
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 0;<span class="cstat-no" title="statement not covered" ></span>
+  }
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const AlignMiddle = <span class="cstat-no" title="statement not covered" >styled.span`</span>
+  vertical-align: middle;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const LargerS<span class="cstat-no" title="statement not covered" >ubtext = styled.span`</span>
+  font-size: 16px;
+`<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const Divider = styled.div`
+  height: 2px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #ededed;
+  margin: 16px -25px;
+  ${media.tablet`
+    margin-top: 30px;
+    margin-bottom: 30px;
+  `};<span class="fstat-no" title="function not covered" ></span>
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const Center = styled.div`
+  display: block;
+  text-align: -webkit-center;
+`
+&nbsp;
+const OnlineWritingHub: React.SFC&lt;{}&gt; = () =&gt; (
+  &lt;PaddedCard&gt;
+    &lt;Center&gt;
+      &lt;H1&gt;EasyBib — your online writing hub&lt;/H1&gt;
+      &lt;LargerSubtext&gt;All the tools to submit your paper with confidence&lt;/LargerSubtext&gt;
+    &lt;/Center&gt;
+    &lt;Divider /&gt;
+    &lt;Box margin={-2}&gt;
+      &lt;FlexRow&gt;<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        &lt;FlexHalf&gt;</span>
+          &lt;TopButtonContainer&gt;
+            &lt;Button newPrimary href="/grammar-and-plagiarism/" onClick={tagCtaMain}&gt;
+              &lt;PillBadge color="white"&gt;New&lt;/PillBadge&gt;
+              &lt;AlignMiddle&gt;Check my paper&lt;/AlignMiddle&gt;
+            &lt;/Button&gt;
+          &lt;/TopButtonContainer&gt;
+          &lt;Box padding={1}&gt;
+            &lt;Button
+              primary
+              onClick={e =&gt; tagCtaLegacy(e, { enablePush: true })}
+              href="/style"
+            &gt;
+              I only want to create citations
+            &lt;/Button&gt;
+          &lt;/Box&gt;
+        &lt;/FlexHalf&gt;
+        &lt;BlueBoxContainer&gt;
+          &lt;Box padding={1}&gt;
+            &lt;BlueBox&gt;
+              &lt;BlueArrow src="/v2/images/blue-arrow.png" /&gt;
+              &lt;span role="img" aria-label="fire"&gt;
+                {'\u{1F525}'}
+              &lt;/span&gt;
+              &lt;strong&gt; Citing and more!&lt;/strong&gt; Check for unintentional plagiarism, add
+              citations directly into your paper, and get advanced grammar help.
+            &lt;/BlueBox&gt;
+          &lt;/Box&gt;
+        &lt;/BlueBoxContainer&gt;
+      &lt;/FlexRow&gt;
+    &lt;/Box&gt;
+  &lt;/PaddedCard&gt;
+)
+&nbsp;
+export default OnlineWritingHub
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

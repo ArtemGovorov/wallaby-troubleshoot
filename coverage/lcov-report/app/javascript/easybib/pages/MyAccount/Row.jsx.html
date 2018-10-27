@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/MyAccount/Row.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/MyAccount</a> Row.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import PropTypes from 'prop-types'
+<span class="cstat-no" title="statement not covered" >import style from 'styled-components'</span>
+import Button from 'easybib/components/Button'
+import Link from 'easybib/components/Link'
+<span class="cstat-no" title="statement not covered" >import Cell from 'easybib/</span>components/Table/Cell'
+&nbsp;
+const MaxWidt<span class="cstat-no" title="statement not covered" >h = style.div`</span>
+  max-width: 300px;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const Row = ({ name, des<span class="cstat-no" title="statement not covered" >c, priceFrequency, status, initCancel, expirationDate</span> }) =&gt; {
+  const dateOrDefault = expirationDate || 'at the end of this billing period'
+  let statusCe<span class="cstat-no" title="statement not covered" >ll</span>
+  switch (status) {
+    case 'ac<span class="cstat-no" title="statement not covered" >tive':</span>
+      statusCell = (
+        &lt;Max<span class="cstat-no" title="statement not covered" >Width&gt;</span>
+          Currently active.{' '}
+<span class="fstat-no" title="function not covered" >          {initCancel &amp;&amp; (<span class="cstat-no" title="statement not covered" ></span></span>
+            &lt;Link gray pointer onClick={initCancel}&gt;
+              C<span class="cstat-no" title="statement not covered" >ancel?</span>
+            &lt;/Link&gt;
+          )}
+        &lt;/MaxWidth&gt;
+      )
+      brea<span class="cstat-no" title="statement not covered" >k<span class="fstat-no" title="function not covered" ></span></span>
+    case 'pen<span class="cstat-no" title="statement not covered" >dingCancel</span>':
+      statusC<span class="cstat-no" title="statement not covered" >ell = (</span>
+        &lt;MaxWidth&gt;<span class="cstat-no" title="statement not covered" ></span>
+          &lt;p&gt;We<span class="cstat-no" title="statement not covered" > are sorry t</span>o see you go!&lt;/p&gt;
+          &lt;p&gt;<span class="cstat-no" title="statement not covered" ></span>
+            {' '}<span class="cstat-no" title="statement not covered" ></span>
+            Your subsc<span class="cstat-no" title="statement not covered" >ription is cancelled effective {dateOrDefault}. You'll</span> have access
+            to all Plus features until then.
+          &lt;/p&gt;
+<span class="cstat-no" title="statement not covered" >          &lt;p&gt;Please, let us know how we can improve.&lt;/p&gt;</span>
+          &lt;Button
+<span class="cstat-no" title="statement not covered" >            newPrimary</span>
+            size="lg"
+            href="https://in.hotjar.com/s?siteId=7064&amp;surveyId=110173"
+            target="_blank"
+          &gt;
+<span class="cstat-no" title="statement not covered" >            S</span>ubmit Feedback
+          &lt;/Button&gt;
+        &lt;/MaxWidth&gt;
+<span class="cstat-no" title="statement not covered" >      )</span>
+      break
+    case 'cancelled':
+      statusCell = 'Cancelled.'
+      break
+    default:
+<span class="cstat-no" title="statement not covered" >      statusC</span>ell = ''
+  }
+&nbsp;
+  retu<span class="cstat-no" title="statement not covered" >rn (</span>
+    &lt;t<span class="cstat-no" title="statement not covered" >r key={</span>`${name}-${status}`}&gt;
+      &lt;Cell highlight pad&gt;
+        {name}
+<span class="cstat-no" title="statement not covered" >      &lt;/Cell&gt;</span>
+      &lt;Cell highlight pad&gt;
+        {desc}
+<span class="cstat-no" title="statement not covered" >      &lt;/Cell&gt;</span>
+      &lt;Cell highlight pad&gt;
+        {priceFrequency}
+      &lt;/Cell&gt;
+      &lt;Cell highlight pad&gt;
+        {statusCell}
+      &lt;/Cell&gt;
+    &lt;/tr&gt;
+  )
+}
+&nbsp;
+Row.propTypes = {
+  name: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  priceFrequency: PropTypes.string.isRequired,
+  initCancel: PropTypes.func,
+  status: PropTypes.string.isRequired,
+<span class="cstat-no" title="statement not covered" >  expirationDate: PropTypes.string.isRequired,</span>
+}
+&nbsp;
+export default Row
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

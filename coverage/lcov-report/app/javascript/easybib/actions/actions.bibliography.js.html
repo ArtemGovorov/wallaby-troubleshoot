@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/actions/actions.bibliography.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/actions</a> actions.bibliography.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/212</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/61</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/173</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  addProjects,
+<span class="cstat-no" title="statement not covered" >  normalize,</span>
+  mergeDataAndLinks,
+  setCurrentProject,
+<span class="cstat-no" title="statement not covered" >} from 'redux-citation-api'</span>
+import * as constants from 'easybib/constants'
+import {<span class="cstat-no" title="statement not covered" ></span>
+  getCitationStyle,
+  getSourceType,<span class="cstat-no" title="statement not covered" ></span>
+  getProject,
+  getSelectedCit<span class="cstat-no" title="statement not covered" >ation,</span>
+  getSelectedCitations,
+  getCitations,<span class="cstat-no" title="statement not covered" ></span>
+} from 'easybib/reducers'
+import { delete<span class="cstat-no" title="statement not covered" >EbUser } from 'easybib/utils/loca</span>lStorage'
+import { push } from 'easybib/utils/history'
+import { initAp<span class="cstat-no" title="statement not covered" >p, loadStyles, setCitationSt</span>yle } from './actions.shared'
+&nbsp;
+import { loadCit<span class="cstat-no" title="statement not covered" >ation } from './actions.sear</span>ch'
+import { displayError } from './actions.errors'
+import { hideMod<span class="cstat-no" title="statement not covered" >al, showModal } from './acti</span>ons.modals'
+import { bibStyleEvent, sortCitationsEvent, formEventCreate } from '../utils/gtm'
+import { redirec<span class="cstat-no" title="statement not covered" >t, redirectToHomePage } from</span> './actions.redirects'
+import { sortCitations } from '../utils/utils'
+import Acti<span class="cstat-no" title="statement not covered" >onTypes from './actions.</span>types'
+import aliasToCode from '../utils/citation-style'
+<span class="cstat-no" title="statement not covered" ></span>
+/**
+ * Update|sav<span class="cstat-no" title="statement not covered" >e a bibliography default s</span>tyle.
+ * @param {object} project - bibliography
+ * @param {strin<span class="cstat-no" title="statement not covered" >g} style</span>
+ * @uses dataApi.updateProjectStyle()
+ */<span class="cstat-no" title="statement not covered" ></span>
+const updateProjectStyle = (project, style) =&gt; (dispatch, getState, { dataApi }) =&gt; {
+  if (sty<span class="fstat-no" title="function not covered" >le === project.defaults</span>tyle) r<span class="cstat-no" title="statement not covered" >eturn Promise.resolve()</span>
+  return dataApi.updateProjectStyle(project, style)
+}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span>
+&nbsp;
+/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+ * Load/display found citations.
+ * Stored<span class="fstat-no" title="function not covered" > in state.cita</span>tions.<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span>
+ * @param {array} citations
+ */<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span>
+export const loadCitations = citations =&gt; ({
+  type: ActionTypes.CITATIONS_LOAD,
+  citations,
+})
+&nbsp;
+/**
+ * Update a citation stored in state and add data to it, in state.citations
+ * @param {string} id - c<span class="cstat-no" title="statement not covered" >itation i<span class="fstat-no" title="function not covered" >d</span></span>
+ *<span class="cstat-no" title="statement not covered" > @param<span class="fstat-no" title="function not covered" > {</span>object} data - data to be added to citation</span>
+ */<span class="cstat-no" title="statement not covered" ></span>
+expo<span class="cstat-no" title="statement not covered" >rt const updateStoreCitation = (id, <span class="cstat-no" title="statement not covered" >data) =&gt; ({</span></span>
+  ty<span class="cstat-no" title="statement not covered" >pe: ActionTypes.CITATION_UPDATE,</span>
+  id,
+  data,
+})
+&nbsp;
+/**
+ * Used to display a loading state when searching for sources.
+ * Stored in state.stylesSearch
+ */
+export const searchStylesStart = () =&gt; ({
+  type: ActionTypes.<span class="cstat-no" title="statement not covered" >STYLES_SE<span class="fstat-no" title="function not covered" >ARCH_START,</span></span>
+})<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+/**
+ * Used to hide loading state when searching for sources has results.
+ * Stored in state.stylesSearch
+ */
+export const searchStylesEnd = () =&gt; ({
+  type: ActionTypes.STYLES_SEARCH_END,
+})
+&nbsp;
+/**
+ * Add styles to current ones.
+<span class="cstat-no" title="statement not covered" > * Stored in state.styles</span>
+ * @param {array} styes
+ */<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+ex<span class="cstat-no" title="statement not covered" >port const addStyles = styles =&gt; ({</span>
+  type: ActionTypes.STYLES_ADD,
+  styles,
+})
+&nbsp;
+/**
+ * GTM event for changing style
+ * @param {string} type
+ */
+export const gtmBibStyleEvent = style =&gt; () =&gt; {
+  bibStyleEvent(style)
+}
+<span class="cstat-no" title="statement not covered" ></span>
+/**
+ * GTM event for sorting<span class="cstat-no" title="statement not covered" > bibliogr<span class="fstat-no" title="function not covered" >aphy list.</span></span>
+ *<span class="cstat-no" title="statement not covered" > @param {string} sortCitationsKey</span>
+ */
+export const gtmSortCitationsEvent = sortCitationsKey =&gt; () =&gt; {
+  sortCitationsEvent(sortCitationsKey)
+}
+&nbsp;
+/**
+ * To signal to GA that there is a new citation added,
+ *   redirectToBibliographyPage adds ?new=1 onto the url. However, people might
+ *   then come back to this with their browser which would cause GA to think
+<span class="cstat-no" title="statement not covered" > *   there is a new citation.</span>
+ * We remove the ?new=1 from the browser url, so user doesn't use this new=1 url.
+ *<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+ *<span class="cstat-no" title="statement not covered" > https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_replaceState()_method</span>
+ */
+export const updateBibliographyUrl = () =&gt; {
+  window.history.replaceState('notnew', '', window.location.href.replace('&amp;new=1', ''))
+}
+&nbsp;
+export const checkIfNewCitation = () =&gt; (dispatch, getState) =&gt; {
+  if (window.location.href.includes('&amp;new=1')) {
+    formEventCreate(getCitationStyle(getState()), getSourceType(getState()), 'success')
+    updateBibliographyUrl()
+  }
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;
+/**<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+ *<span class="cstat-no" title="statement not covered" > Get footnote for a given citation.</span>
+ * Documentation for footnote API
+ * http://developer.easybib.com/citation-formatting-api/citation-formatting-api-api-spec-v2-1/
+ * @param {object} citation
+ */
+export const getFootnote = citation =&gt; (dispatch, getState, { formatApi }) =&gt; {
+  const data = { type: 'footnotes', ...citation }
+  return formatApi
+    .formatCitations([data], aliasToCode(getCitationStyle(getState())))
+    .then(
+      response =&gt; {
+<span class="cstat-no" title="statement not covered" >        const footnote = respon</span>se.data[0].citation
+        const citationId = response.data[0].custom_id
+        dispatch(update<span class="cstat-no" title="statement not covered" >StoreCita<span class="fstat-no" title="function not covered" >tion(citationId, </span>{ footnote }))</span>
+<span class="cstat-no" title="statement not covered" >        /<span class="fstat-no" title="function not covered" >/ </span>update current citation</span>
+<span class="cstat-no" title="statement not covered" >        const updatedCitation = getS</span>tate().citations.find(c =&gt; c.id === citationId)
+        dispatch(loadCitation(updatedCitation))
+      },
+      e =&gt; {
+        dispatch(hideModal())
+        dispatch(displayError(constants.GET_FOOTNOTE_ERROR, e))
+      }
+    )
+}
+<span class="cstat-no" title="statement not covered" ></span>
+/**
+ * Load bibliography and its<span class="cstat-no" title="statement not covered" > citation<span class="fstat-no" title="function not covered" >s on BibliographyPage </span>and format them according to the</span>
+ *<span class="cstat-no" title="statement not covered" > biblio<span class="fstat-no" title="function not covered" >gr</span>aphy default style if needed.</span>
+ * @<span class="cstat-no" title="statement not covered" >param {string} projectId - bibliography id</span>
+ * @param {string} style
+ * @uses dataApi.getCitations()
+ */
+export const loadProjectAndCitations = () =&gt; (dispatch, getState, { dataApi }) =&gt; {
+  const project = getState().currentProject
+  const style = getCitationStyle(getState())
+  const styleInUrl = window.location.href.includes('style')
+  const citationStyle = styleInUrl ? style || project.defaultstyle : project.defaultstyle
+  // If the user could not retrieve a project for whatever reason,
+  // clear their token cache, and redirect to homepage
+  if (!project || Object.keys(project).length === 0) {
+    deleteEbUser()
+    return redirectToHomePage(push)
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+  dispatch(setCitationStyle(<span class="cstat-no" title="statement not covered" >citationS<span class="fstat-no" title="function not covered" >tyle))</span></span>
+<span class="cstat-no" title="statement not covered" >  return dispatch(updateProjectStyle(project, aliasToCode(citationStyle))).then(</span>
+    () =&gt;
+      dataApi.getCitations(project, aliasToCode(citationStyle)).then(
+<span class="cstat-no" title="statement not covered" >        resp =&gt; {</span>
+          if (resp.data &amp;&amp; resp.data.length &gt; 0) {
+            const normali<span class="cstat-no" title="statement not covered" >zedCitati<span class="fstat-no" title="function not covered" >ons = sortCitations</span>(normalize(resp.data))</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >            dispatch(loadCitations(normalizedCitations))</span>
+<span class="cstat-no" title="statement not covered" >          } else {</span>
+<span class="cstat-no" title="statement not covered" >            dispatch(loadCitati</span>ons([]))
+          }
+        },
+        e =&gt; dispatch(displayError(constants.GET_CITATIONS_ERROR, e))
+      ),
+    e =&gt; dispatch(displayError(constants.UPDATE_PROJECT_ERROR, e))
+  )
+}
+&nbsp;
+/**
+ * Load additional citation styles to state.styles, with a merge|overwrite option.
+ * Overwrite is typically used when searching for extra styles, when we want to display only search
+<span class="cstat-no" title="statement not covered" > * results in the styles dropdown.</span>
+ * Used in BibliographyPage.
+ * Stored in state<span class="cstat-no" title="statement not covered" >.styles<span class="fstat-no" title="function not covered" ></span></span>
+ *<span class="cstat-no" title="statement not covered" > @param<span class="fstat-no" title="function not covered" > {</span>string} term - searched term</span>
+ * @param {integer} <span class="cstat-no" title="statement not covered" >page - page from</span> searched results
+ * @param {boolean} merge - merge or overwrite current styles with search results
+ * @param {func<span class="cstat-no" title="statement not covered" >tion} callback</span>
+ */
+export const loadMoreStyles = (term, page, merge = false, callback) =&gt; (
+  dispatch,
+  ge<span class="cstat-no" title="statement not covered" >tState,<span class="fstat-no" title="function not covered" ></span></span>
+  { formatApi }<span class="cstat-no" title="statement not covered" ></span>
+) =&gt; {<span class="cstat-no" title="statement not covered" ></span>
+  if (<span class="cstat-no" title="statement not covered" >!merge) dispatch(searchStylesStart())</span>
+  formatApi.getStyles(term, page).then(styles =&gt; {
+    if (merge) {
+      dispatch(addStyles(styles.results))
+    } else {<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+      di<span class="cstat-no" title="statement not covered" >spatch(searchStylesEnd())</span>
+      dispatch(loadStyles(styles.results))
+    }<span class="cstat-no" title="statement not covered" ></span>
+    if <span class="fstat-no" title="function not covered" >(c</span>allback &amp;&amp; typeof callback === 'function') {
+<span class="cstat-no" title="statement not covered" >      callback(styles.results)</span>
+    }<span class="cstat-no" title="statement not covered" ></span>
+  })
+}
+&nbsp;
+const getProjects = () =&gt; (dispatch, getState, { dataApi }) =&gt;
+  new Promise(resolve =&gt; {
+    // Make a call for projects, only if we don't currently have any.
+    // Resolve once we receive them
+    if (!getState().projects.length) {
+      dataApi.getProjects().then(({ data }) =&gt; {
+        dispatch(addProjects(normalize(data)))
+        resolve()
+      })
+<span class="cstat-no" title="statement not covered" >      // If we DO have projects, re</span>solve right away
+    } else {
+      resolve()<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    }<span class="fstat-no" title="function not covered" ></span></span>
+  })<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+export const sho<span class="cstat-no" title="statement not covered" >wCitationModals = citationID =&gt; (dispatch, g</span>etState) =&gt; {
+  if (citationID) {<span class="cstat-no" title="statement not covered" ></span>
+    dispatch(loadCitatio<span class="cstat-no" title="statement not covered" >n(citationID))</span>
+  }
+  dispatch(getProjects()).then(() =&gt; {
+<span class="cstat-no" title="statement not covered" >    const moreThanOneProject = getState().projects.length &gt; 1</span>
+    if<span class="cstat-no" title="statement not covered" > (moreThanOneProject) {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(showModal('select-project'))</span>
+    } else {
+      dispatch(showModal('create-project'))
+<span class="cstat-no" title="statement not covered" >    }</span>
+  })<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+}<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const reduxCitationAPIHackyNormalize<span class="cstat-no" title="statement not covered" > = item =&gt; ({ data: item })</span>
+<span class="cstat-no" title="statement not covered" ></span>
+/**
+ * Save ci<span class="cstat-no" title="statement not covered" >tations to a project:</span>
+ * - if there is a citation in state.citation we use that one
+ * - if n<span class="fstat-no" title="function not covered" >ot</span> we use the ones from the current project in state.citations
+ * @para<span class="cstat-no" title="statement not covered" >m {String} projectId</span>
+ * @return {Promise&lt;Object&gt;}
+ */<span class="fstat-no" title="function not covered" ></span>
+export<span class="cstat-no" title="statement not covered" > const saveCitationsToProject = projectID =&gt; (dispatch, getState, { dataApi }) =&gt;</span> {
+  const project = getProject(getState(), projectID)
+  const citations = getCitations(getState())
+&nbsp;
+  const selectedCitations = getSelectedCitations(getState())
+  const selectedCitation = getSelectedCitation(getState())
+&nbsp;
+  let citationsDataList
+  if (selectedCitation) {
+    citationsDataList = [selectedCitation]
+  } else if (selectedCitations.length) {
+    citationsDataList = selectedCitations
+  } else citationsDataList = citations
+&nbsp;
+  const formattedData = citationsDataList.map(item =&gt;
+    reduxCitationAPIHackyNormalize(item)
+  )
+<span class="cstat-no" title="statement not covered" ></span>
+  return dataApi
+    .addCitationsToPr<span class="cstat-no" title="statement not covered" >oject(pro<span class="fstat-no" title="function not covered" >ject, formatted</span>Data)</span>
+    .then(() =<span class="cstat-no" title="statement not covered" >&gt; redirect(`/project?id=${projectID}`))</span>
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+/**<span class="cstat-no" title="statement not covered" ></span>
+ * C<span class="cstat-no" title="statement not covered" >reate a new <span class="cstat-no" title="statement not covered" >bibliography|project.</span></span>
+ * @<span class="cstat-no" title="statement not covered" >param {string} style - bibliography s<span class="fstat-no" title="function not covered" >ty</span>le</span>
+ * @us<span class="cstat-no" title="statement not covered" >es dataApi.createProject()</span>
+ * @todo<span class="cstat-no" title="statement not covered" > take `createProject` and this functi</span>on, and refactor into something
+ * a little bit cleaner
+ */<span class="cstat-no" title="statement not covered" ></span>
+export c<span class="cstat-no" title="statement not covered" >onst createNamedProject = name =&gt; (dispatch, getStat</span>e, { dataApi }) =&gt; {
+  const style = getState().currentProject.defaultstyle
+  const shouldProjectBePublic = getState().user.loggedIn === false
+  retu<span class="cstat-no" title="statement not covered" >rn dataApi.createProject(name, style, shouldProjectBePublic).then(</span>
+    resp<span class="cstat-no" title="statement not covered" >onse =&gt; {</span>
+      const project = mergeDataAndLinks(response)
+      const currentProjects = getState().projects
+      const combinedProjects = currentProjects.concat(project)
+      dispatch(addProjects(combinedProjects))
+      dispatch(setCurrentProject(combinedProjects[0]))
+<span class="cstat-no" title="statement not covered" >      dispatch(saveCitationsToProject(res</span>ponse.data.id))
+    },
+    e =&gt; dispatch(<span class="cstat-no" title="statement not covered" >displayEr<span class="fstat-no" title="function not covered" >ror(constant</span>s.CREATE_PROJECT_ERROR, e))</span>
+<span class="cstat-no" title="statement not covered" >  )<span class="fstat-no" title="function not covered" ></span></span>
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+export const initBibliographyPage = () =&gt; async dispatch =&gt; {
+  await dispatch(initApp('bibliography'))
+  disp<span class="cstat-no" title="statement not covered" >atch(loadProjectAndCitations())</span>
+  dispat<span class="cstat-no" title="statement not covered" >ch(checkIfNewCitation())<span class="fstat-no" title="function not covered" ></span></span>
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:57 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

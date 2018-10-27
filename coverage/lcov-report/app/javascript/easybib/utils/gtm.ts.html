@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/utils/gtm.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/utils</a> gtm.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.84% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>73/95</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.81% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.46% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75.56% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>68/90</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { push } from 'easybib/utils/history'
+import isWindowDefined from 'easybib/utils/isWindowDefined'
+import { SyntheticEvent } from 'react'
+import { GTMData, EBUser } from 'types/easybib'
+&nbsp;
+export const sendToGTM = (data: GTMData): void =&gt; {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (isWindowDefined) {
+    window.dataLayer = window.dataLayer || <span class="branch-1 cbranch-no" title="branch not covered" >[]</span>
+    window.dataLayer.push({
+      ...data,
+    })
+  }
+}
+&nbsp;
+export const sendToGTMPromise = (data: GTMData): Promise&lt;void&gt; =&gt; {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (isWindowDefined) {
+    if (window.google_tag_manager) {
+      sendToGTM({
+        ...data,
+        eventCallback: <span class="fstat-no" title="function not covered" >containerID =&gt; {</span>
+          // There can be containers other than ours on the site.
+          // eventCallback is fired for *each* container, causing
+          // the code inside to execute multiple times
+          // unnecessarily. We check for our ID so that we fire this
+          // only once, only when our container receives the necessary
+          // data
+          const ourContainerID = <span class="cstat-no" title="statement not covered" >'GTM-MS6L4L'</span>
+<span class="cstat-no" title="statement not covered" >          if (containerID === ourContainerID) {</span>
+<span class="cstat-no" title="statement not covered" >            return Promise.resolve()</span>
+          }
+        },
+        eventTimeout: 2000,
+      })
+    } else {
+      return Promise.resolve()
+    }
+  }
+}
+&nbsp;
+export const sendToGTMLink = (data: GTMData) =&gt; async (
+  e: SyntheticEvent,
+  options: { enablePush?: boolean; href?: string } = {}
+): Promise&lt;void&gt; =&gt; {
+  if (<span class="cstat-no" title="statement not covered" >isWindowDefined)</span> {
+    if (window.google_tag_manager) {
+      e.preventDefault()
+&nbsp;
+      // This is necessary so that React holds onto a reference
+      // of the event, otherwise it blows it away.
+      e.persist()
+&nbsp;
+      const selectedHref = options.href || e.currentTarget.getAttribute('href')
+&nbsp;
+      await sendToGTMPromise(data)
+&nbsp;
+      if (options.enablePush) {
+        push(selectedHref)
+      } else {
+        window.location.href = selectedHref
+      }
+    }
+  }
+}
+&nbsp;
+const intentToSubEvent = (label: string, eventCategory?: string): GTMData =&gt; ({
+  event: 'event',
+  eventCategory: eventCategory || 'subscription conversion flow',
+  eventAction: 'intent to subscribe',
+  eventLabel: label,
+})
+&nbsp;
+export const intentToSubCTA = sendToGTMLink(intentToSubEvent('homepage image cta'))
+&nbsp;
+export const intentToSubAds = sendToGTMLink(intentToSubEvent('upgrade to remove ads'))
+&nbsp;
+const paperChecker = (label: string, action: string = 'enter flow'): GTMData =&gt; ({
+  event: 'event',
+  eventCategory: 'paperchecker funnel',
+  eventAction: action,
+  eventLabel: label,
+})
+export const tagCtaSSSP = sendToGTMLink(paperChecker('SSSP link'))
+export const tagCtaFeature = sendToGTMLink(paperChecker('homepage cta - feature tour'))
+export const tagCtaMain = sendToGTMLink(paperChecker('homepage cta - main widget'))
+export const tagCtaValue = sendToGTMLink(paperChecker('homepage cta - value table'))
+export const tagCtaLogout = sendToGTMLink(paperChecker('logout page'))
+export const tagCtaViewCTA = sendToGTMLink(paperChecker('view page cta'))
+export const tagCtaNavLink = sendToGTMLink(paperChecker('nav text link'))
+export const tagCtaLegacy = sendToGTMLink(
+  paperChecker('create citations with legacy', 'did not enter flow')
+)
+export const tagNavUpgrade = sendToGTMLink(
+  intentToSubEvent('upgrade to easybib plus', 'left menu')
+)
+export const tagMenuUpgrade = sendToGTMLink(
+  intentToSubEvent('upgrade to easybib plus', 'right menu')
+)
+export const tagCtaGrammar = sendToGTMLink(paperChecker('grammar citation link'))
+export const tagCtaPlagiarism = sendToGTMLink(paperChecker('plagiarism citation link'))
+&nbsp;
+export const tagNavSignup = <span class="fstat-no" title="function not covered" >async () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  await sendToGTMPromise({</span>
+    event: 'event',
+    eventCategory: 'all-nav',
+    eventAction: 'signup',
+    eventLabel: 'signup',
+  })
+}
+&nbsp;
+export const tagLogin = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'email-login',
+    validation: 'success',
+  })
+}
+&nbsp;
+export const tagSignup = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'email-signup',
+    linkLocation: 'superauth component',
+    validation: 'success',
+  })
+}
+&nbsp;
+export const styleEvent = <span class="fstat-no" title="function not covered" >(</span>style: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'citation creation flow',
+    eventAction: 'select style type',
+    eventLabel: style,
+    styleType: style,
+  })
+}
+&nbsp;
+export const copyAllEvent = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'bibliography module',
+    eventAction: 'copy all',
+    eventLabel: 'copy all',
+  })
+}
+&nbsp;
+export const bibStyleEvent = <span class="fstat-no" title="function not covered" >(</span>style: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'bibliography module',
+    eventAction: 'select style type',
+    eventLabel: style,
+    styleType: style,
+  })
+}
+&nbsp;
+export const manualEvent = <span class="fstat-no" title="function not covered" >(</span>style: string, type: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'citation creation flow',
+    eventAction: 'manual cite',
+    eventLabel: 'search widget',
+    styleType: style,
+    sourceType: type,
+  })
+}
+&nbsp;
+export const formEventCreate = <span class="fstat-no" title="function not covered" >(</span>style: string, type: string, success: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'citation creation flow',
+    eventLabel: success,
+    eventAction: 'create citation',
+    styleType: style,
+    sourceType: type,
+  })
+}
+&nbsp;
+export const formEventViaDispatch = <span class="fstat-no" title="function not covered" >(</span>style: string, type: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'citation creation flow',
+    eventLabel: 'success',
+    eventAction: 'createCitation',
+    styleType: style,
+    sourceType: type,
+  })
+}
+&nbsp;
+export const formEventUpdate = <span class="fstat-no" title="function not covered" >async (</span>
+  style: string,
+  type: string,
+  success: string,
+  callback?: () =&gt; void
+) =&gt; {
+<span class="cstat-no" title="statement not covered" >  await sendToGTMPromise({</span>
+    event: 'event',
+    eventCategory: 'citation creation flow',
+    eventLabel: success,
+    eventAction: 'update citation',
+    styleType: style,
+    sourceType: type,
+  })
+<span class="cstat-no" title="statement not covered" >  if (callback) {</span>
+<span class="cstat-no" title="statement not covered" >    callback()</span>
+  }
+}
+&nbsp;
+export const searchEvent = <span class="fstat-no" title="function not covered" >async (</span>style: string, type: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >  await sendToGTMPromise({</span>
+    event: 'event',
+    eventCategory: 'citation creation flow',
+    eventAction: 'execute search',
+    sourceStyle: style,
+    sourceType: type,
+  })
+}
+&nbsp;
+export const sortCitationsEvent = <span class="fstat-no" title="function not covered" >(</span>sortCitationsKey: string) =&gt; {
+  const sortEvents = <span class="cstat-no" title="statement not covered" >{</span>
+    dateLeastRecent: 'Least recent',
+    dateMostRecent: 'Most recent',
+    alphabetical: 'Alphabetical',
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  sendToGTM({</span>
+    event: 'event',
+    eventCategory: 'bibliography module',
+    eventAction: 'sort',
+    eventLabel: sortEvents[sortCitationsKey],
+  })
+}
+export const bibliographyEvent = (action: string, value: string) =&gt; ({
+  event: 'event',
+  eventCategory: 'bibliography module',
+  eventAction: action,
+  eventLabel: value,
+})
+&nbsp;
+export const sendSaveEvent = sendToGTMLink(bibliographyEvent('save', 'save'))
+export const sendMoreEvent = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sendToGTM(bibliographyEvent('more', 'more'))</span>
+}
+export const sendIntextEvent = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sendToGTM(bibliographyEvent('intext', 'in-text citation'))</span>
+}
+&nbsp;
+export const sendShowCommentsEvent = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sendToGTM(bibliographyEvent('comment', 'comment'))</span>
+}
+&nbsp;
+export const getSubdomain = (hostname: string) =&gt; {
+  const segments = hostname.split('.')
+  const subdomain = segments.length &lt; 3 ? 'www' : segments[0]
+  return subdomain
+}
+&nbsp;
+const getPageTitle = (page: string) =&gt; {
+  const pageTitleMap = {
+    search: 'citation search results',
+    webeval: 'citation evaluation review',
+    form: 'citation form',
+    view: 'bibliography',
+    homepage: 'homepage',
+  }
+  return pageTitleMap[page] || <span class="branch-1 cbranch-no" title="branch not covered" >page</span>
+}
+&nbsp;
+export interface InitCoreDataLayerParams {
+  event: string
+  page: string
+  ebUser: EBUser
+  release: string
+  hostname: string
+}
+&nbsp;
+export const initCoreDataLayer = ({
+  event,
+  page,
+  ebUser,
+  release,
+  hostname,
+}: InitCoreDataLayerParams) =&gt; {
+  interface GTMCoreData extends GTMData {
+    release: string
+    subdomain: string
+    userID: string | null
+    loggedIn: string
+    paidMember: string
+    role: string
+    schoolID: string | null
+    coupon: string | null
+    affiliate: string | null
+    adVantagePage: string
+    redesignPage: string
+    subscriptionType: string | null
+    pageGroup: string
+    pageSubGroup: string
+  }
+  const data: GTMCoreData = {
+    release,
+    event,
+    subdomain: getSubdomain(hostname),
+    userID: null,
+    loggedIn: ebUser.loggedIn ? 'yes' : <span class="branch-1 cbranch-no" title="branch not covered" >'no',</span>
+    paidMember: ebUser.user &amp;&amp; ebUser.user.role === 'mybibpro' ? 'yes' : 'no',
+    role: (ebUser.user &amp;&amp; ebUser.user.role) || 'not_logged_in',
+    schoolID: ebUser.schoolID || <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
+    coupon: ebUser.coupon || <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
+    affiliate: null,
+    adVantagePage: page,
+    redesignPage: 'redesign',
+    subscriptionType: (ebUser.user &amp;&amp; ebUser.user.subscriptionType) || null,
+    pageGroup: 'core citation flow',
+    pageSubGroup: getPageTitle(page),
+  }
+  sendToGTM(data)
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:18:42 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

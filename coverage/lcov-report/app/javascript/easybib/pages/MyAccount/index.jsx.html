@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/MyAccount/index.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/MyAccount</a> index.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/107</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/87</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/65</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+<span class="cstat-no" title="statement not covered" >import { connect } from 'react-redux'</span>
+&nbsp;
+import { MyAccount as SubFEContainer } from 'subscription-frontend'
+<span class="cstat-no" title="statement not covered" ></span>
+import initMyAccount from 'easybib/actions/actions.myaccount'
+import withBa<span class="cstat-no" title="statement not covered" >seWrapper from 'easybib/hocs/withBaseWrapp</span>er'
+&nbsp;
+import { showModa<span class="cstat-no" title="statement not covered" >l as showModalAction } from 'easybib/actions/a</span>ctions.modals'
+import ModalWrapper from 'easybib/organisms/ModalWrapper'
+<span class="cstat-no" title="statement not covered" ></span>
+import Card from 'easybib/components/Card'
+import Link from 'easybib/co<span class="cstat-no" title="statement not covered" >mponents/Link'</span>
+import { H2 } from 'easybib/components/Heading'
+import Loading <span class="cstat-no" title="statement not covered" >from 'easybib/components/Loading'</span>
+import isWindowDefined from 'easybib/utils/isWindowDefined'
+import isEmpty from 'lo<span class="cstat-no" title="statement not covered" >dash.isempty'</span>
+&nbsp;
+import PlanTable<span class="cstat-no" title="statement not covered" > from './PlanTable'</span>
+import subFeProps from './sharedSubscriptionFrontendProps'
+/*<span class="cstat-no" title="statement not covered" ></span>
+  If user NOT logged in
+    show lin<span class="cstat-no" title="statement not covered" >ks to register + login</span>
+  If user logged in AND unpaid user
+    show lin<span class="cstat-no" title="statement not covered" >k to upgrade</span>
+  If user logged in AND paid user
+    initialize <span class="cstat-no" title="statement not covered" >sub-fe-container</span>
+    fetch ecom subscriptions
+      - IF ecom<span class="cstat-no" title="statement not covered" > subscription - show management table</span>
+      - ELSE redirect to legacy easybib/www/account
+*/<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+export class M<span class="cstat-no" title="statement not covered" >yAccount extends Component {</span>
+  renderManageAccount() {
+    const { showM<span class="cstat-no" title="statement not covered" >odal } = this.props</span>
+    return (
+      &lt;SubFEContainer<span class="cstat-no" title="statement not covered" ></span>
+        {...subFeProps}
+        P<span class="fstat-no" title="function not covered" >lanTable={PlanTable}<span class="cstat-no" title="statement not covered" ></span></span>
+        Loading={Loading}
+        o<span class="fstat-no" title="function not covered" >nCancelComplete={() =&gt; s</span>howModa<span class="cstat-no" title="statement not covered" >l('cancellation-alert')}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span></span></span>
+        onFetchSubscriptionsError={() =&gt; showModal('fetch-cancellation-error')}
+        o<span class="fstat-no" title="function not covered" >nCancell</span>ationEr<span class="cstat-no" title="statement not covered" >ror={() =&gt; showModal('fetch-cancellation-error')}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span>
+      /&gt;
+    )<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span>
+  }
+  renderL<span class="fstat-no" title="function not covered" >ogin() {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+    const loginUrl = '/login'
+    const<span class="fstat-no" title="function not covered" > registerUrl = '/r</span>egister'<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span>
+    return (
+      &lt;p&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span>
+        You must be logged in to view your account details. Please{' '}
+        &lt;<span class="fstat-no" title="function not covered" >Link href={loginUrl} blue&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span>
+          login
+        &lt;<span class="fstat-no" title="function not covered" >/Link&gt;{' '}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span>
+        or{' '}
+        &lt;<span class="fstat-no" title="function not covered" >Link href=</span>{registerUrl} blue&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span>
+          register
+        &lt;/Link&gt;{' '}
+        first.
+      &lt;/p&gt;
+    )
+  }
+  render() {
+    const { awaitingTokenResponse, notLoggedIn, manageExistingSubscription } = this.props
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Card&gt;
+          &lt;H2&gt;My Account&lt;/H2&gt;
+          {awaitingTokenResponse &amp;&amp; &lt;Loading message="Fetching your subscription..." /&gt;}
+          {notLoggedIn &amp;&amp; this.renderLogin()}
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>          {this.props.notPro &amp;&amp; (</span>
+<span class="cstat-no" title="statement not covered" >            &lt;p&gt;</span>
+              &lt;Link href="/upgrade" blue&gt;
+<span class="fstat-no" title="function not covered" >                Upgra</span>de to EasyBib Plus for access to all of our premium features.
+<span class="cstat-no" title="statement not covered" >              &lt;/Link&gt;</span>
+            &lt;/p&gt;
+<span class="cstat-no" title="statement not covered" >          )}</span>
+          {!notLoggedIn &amp;&amp; (
+            &lt;p&gt;
+<span class="cstat-no" title="statement not covered" >              Your EasyBib Profile is now the same as your Chegg Profile!</span>
+              &lt;br /&gt;
+              Click{<span class="fstat-no" title="function not covered" >' '}</span>
+              &lt;Link hr<span class="cstat-no" title="statement not covered" >ef="https://www.chegg</span>.com/my/account" target="_blank" blue&gt;
+<span class="cstat-no" title="statement not covered" >                here</span>
+              &lt;/Link&gt;{' '}
+              to update your profile (you may be asked to login again for security
+              reasons).<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            &lt;/p&gt;</span>
+          )}
+          {manageExistingSubscription &amp;&amp; thi<span class="fstat-no" title="function not covered" >s.renderManageAccount()}</span>
+        &lt;/<span class="cstat-no" title="statement not covered" >Card&gt;</span>
+        {isWindowDefined &amp;&amp; &lt;ModalWrapper /&gt;}
+      &lt;/React.Fragment&gt;<span class="fstat-no" title="function not covered" ></span>
+    )<span class="cstat-no" title="statement not covered" ></span>
+  }
+}
+&nbsp;
+MyAccount.propTypes = {
+  showModal: PropTypes.func,
+  awaitingTokenRespo<span class="fstat-no" title="function not covered" >nse: PropTyp</span>es.bool,
+  notLoggedIn: PropTy<span class="cstat-no" title="statement not covered" >pes.bool,</span>
+  notPro: PropTypes.bool<span class="cstat-no" title="statement not covered" >,</span>
+  mana<span class="cstat-no" title="statement not covered" >geExistingSubscription: PropTypes.bool,</span>
+}
+&nbsp;
+MyAccount.defaultProps = {
+  awaitingTokenResponse: true,
+  notLoggedIn: false,
+  notPro: false,
+  manageExistingSubscription: false,
+  showModal: () =&gt; {},
+}
+<span class="fstat-no" title="function not covered" ></span>
+function mapStateTo<span class="cstat-no" title="statement not covered" >Props({ use</span>r }) {
+  const awaitingTokenResponse = is<span class="cstat-no" title="statement not covered" >Empty(user)</span>
+  let notLoggedIn<span class="cstat-no" title="statement not covered" ></span>
+  let notPro<span class="cstat-no" title="statement not covered" ></span>
+  let <span class="cstat-no" title="statement not covered" >manageExistingSubscription</span>
+  if (!awaitingTokenResponse) {
+    if (user.loggedIn === false) {
+      notLoggedIn = true
+    }
+    if (user.loggedIn &amp;&amp; user.paidMember === false) {
+      notPro = true
+    }
+    if (user.loggedIn &amp;&amp; user.paidMember === true) {
+      manageExistingSubscription = true
+    }
+  }
+  return {
+<span class="cstat-no" title="statement not covered" >    awaitingTokenRes</span>ponse,
+    notLoggedIn,
+    notPro,
+<span class="cstat-no" title="statement not covered" >    manageExistingSubscription,</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+}
+&nbsp;
+const mapDispatchToProps = dispatch =&gt; ({
+  showModal: modalType =&gt; dispatch(showModalAction(modalType)),
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export default withBaseWrapper(</span>
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(MyAccount),
+  initMyAccount<span class="fstat-no" title="function not covered" ></span>
+)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

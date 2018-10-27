@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "easybib/*": ["app/javascript/easybib/*"]
+    },
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "lib": ["es7", "dom"],
+    "module": "esNext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules",
+    "app/assets/**/*",
+    "public/**/*",
+    "vendor/**/*",
+    "coverage/**/*",
+    "spec/**/*",
+    "package.json",
+    "app/javascript/packs/application.js",
+    "app/javascript/packs/server_rendering.js",
+    "**/*.json",
+    "tsconfig.json",
+    "tslint.json"
+  ],
+  "compileOnSave": false
+}

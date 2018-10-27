@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/components/BottomContent/ResourceCards.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/components/BottomContent</a> ResourceCards.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/13</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import Advert from 'easybib/atoms/Advert'
+<span class="cstat-no" title="statement not covered" >import { H2 } from 'easybib/components/Heading'</span>
+import Box from 'easybib/components/Box'
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const data = [</span>
+  {
+    heading: <span class="cstat-no" title="statement not covered" >'MLA  Format Guide',</span>
+    summary:
+      'This is<span class="cstat-no" title="statement not covered" > the total package when it comes to MLA format. Our easy</span> to read guide comes complete with visual examples and step by step instructions to format your citations and your paper in MLA style.',
+    url: 'http://www.easybib.com/guides/citation-guides/mla-format/',
+  },<span class="cstat-no" title="statement not covered" ></span>
+  {
+    heading<span class="cstat-no" title="statement not covered" >: 'Cite Anything and Everything in APA Format',</span>
+    summary:
+      'Ge<span class="fstat-no" title="function not covered" >t the facts on citing a</span>nd writ<span class="cstat-no" title="statement not covered" >ing in APA format with our comprehensive guide. Formatt</span>ing instructions, sample papers, and citation examples provide you with the tools you need to style your paper in APA.',
+    url: 'http://www.easybib.com/guides/citation-guides/apa-format/',
+  },<span class="cstat-no" title="statement not covered" ></span>
+  {
+    heading: 'Chicago Format Guide to Citing',
+    summary:
+      'Looking to format your paper in Chicago style and not sure where to start? Our guide provides everything you need! Learn the basics and fundamentals to creating citations in Chicago format. With numerous examples and visuals, you’ll be citing in Chicago style in no time.',
+    url: 'http://www.easybib.com/guides/citation-guides/chicago-turabian/',
+  },
+  {
+    heading: 'Learn From Our Innovative Blog',
+    summary:
+      'Our blog features current and innovative topics to keep you up to speed on citing and writing. Whether you’re an educator, student, or someone who lives and breathes citations (it’s not as uncommon as you might think!), our blog features new and exciting articles to discover and learn from.',
+    url: 'http://www.easybib.com/guides/category/blog-posts/',
+  },
+  {
+    heading: 'Looking for Other Tools and Resources?',
+    summary:
+      'Our Writing Center is jam-packed with tons of exciting resources. Videos, infographics, research guides, and many other citation-related resources are found here. Check it out to find what you need to succeed!',
+    url: 'http://www.easybib.com/guides/',
+  },
+]
+&nbsp;
+const ResourceCards: React.SFC&lt;{}&gt; = () =&gt; (
+  &lt;Box margin={6}&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    &lt;H2&gt;Guides &amp; Resources&lt;/H2&gt;</span>
+    {data.map((item, index) =&gt; (
+      &lt;div className="text-center" key={item.heading}&gt;<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        &lt;section className="card"&gt;</span>
+          &lt;a className="card-title" href={item.url}&gt;
+            {item.heading}
+          &lt;/a&gt;
+          &lt;p&gt;{item.summary}&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;Advert placement={`C${index + 3}`} /&gt;
+      &lt;/div&gt;
+    ))}
+  &lt;/Box&gt;
+)
+&nbsp;
+export default ResourceCards
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:11:12 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

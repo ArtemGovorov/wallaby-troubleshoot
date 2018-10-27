@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/organisms/ModalWrapper.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/organisms</a> ModalWrapper.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import PropTypes from 'prop-types'
+<span class="cstat-no" title="statement not covered" >import { connect } from 'react-redux'</span>
+&nbsp;
+import { hideModalAfterTimeout } from 'easybib/actions/actions.modals'
+<span class="cstat-no" title="statement not covered" >import CreateProjectModal </span>from '../molecules/CreateProjectModal'
+import SelectProjectModal from '../molecules/SelectProjectModal'
+import Footno<span class="cstat-no" title="statement not covered" >teModal from '../molecules/FootnoteModal'</span>
+import InTextModal from '../molecules/InTextModal'
+import Modal from<span class="cstat-no" title="statement not covered" > '../molecules/Modal'</span>
+import CancellationAlertModal from '../molecules/CancellationAlertModal'
+import Subscriptio<span class="cstat-no" title="statement not covered" >nModal from '../molecul</span>es/SubscriptionModal'
+&nbsp;
+function ModalW<span class="cstat-no" title="statement not covered" >rapper({ type, hideAfterTimeout, options }</span>) {
+  let node
+  let heading<span class="cstat-no" title="statement not covered" ></span>
+  let noHeader = false
+  let customDialogWidth<span class="cstat-no" title="statement not covered" ></span>
+  let customBodyPadding
+  let customBodyHeigh<span class="cstat-no" title="statement not covered" >t</span>
+  switch (type) {
+    case 'loader':<span class="cstat-no" title="statement not covered" ></span>
+      node = &lt;div&gt;Loader&lt;/div&gt;
+      heading<span class="cstat-no" title="statement not covered" > = 'Loader'</span>
+      break
+    case 'intext-citation':<span class="cstat-no" title="statement not covered" ></span>
+      node = &lt;InTextModal /&gt;
+      heading = 'In-text <span class="cstat-no" title="statement not covered" >citation'</span>
+      break
+    case <span class="fstat-no" title="function not covered" >'footnote':<span class="cstat-no" title="statement not covered" ></span></span>
+      node = &lt;FootnoteModal /&gt;
+      hea<span class="fstat-no" title="function not covered" >ding = 'Footn</span>ote'
+      break<span class="cstat-no" title="statement not covered" ></span>
+    case 'select-project'<span class="cstat-no" title="statement not covered" >:</span>
+      node = &lt;Se<span class="cstat-no" title="statement not covered" >lectProjectMo</span>dal /&gt;
+      noHeader = true
+      break
+    case 'create-<span class="cstat-no" title="statement not covered" >projec</span>t':
+      node = &lt;CreateProjectModal /&gt;
+      noHeader = true
+      break
+    case 'cancellation-alert':
+<span class="cstat-no" title="statement not covered" >      node = (</span>
+        &lt;CancellationAlertModal text="Your cancellation is being processed and will complete shortly." /&gt;
+<span class="cstat-no" title="statement not covered" >      )</span>
+<span class="cstat-no" title="statement not covered" >      hideAfterTimeout({</span>
+<span class="cstat-no" title="statement not covered" >        modal</span>Type: type,
+        seconds: 2.5,
+      })
+<span class="cstat-no" title="statement not covered" >      noHeader = false</span>
+<span class="cstat-no" title="statement not covered" >      break</span>
+    ca<span class="cstat-no" title="statement not covered" >se 'fet</span>ch-cancellation-error':
+      node = (
+        &lt;CancellationAlertModal text="It's not you, it's us! Your request has errored, please try again." /&gt;
+<span class="cstat-no" title="statement not covered" >      )</span>
+<span class="cstat-no" title="statement not covered" >      noHeader = false</span>
+<span class="cstat-no" title="statement not covered" >      break</span>
+    case 'subscription':
+      node = &lt;SubscriptionModal plusTest={options.plusTest} /&gt;
+<span class="cstat-no" title="statement not covered" >      noHeader = true</span>
+<span class="cstat-no" title="statement not covered" >      customDialogWidth</span> = '800px'
+<span class="cstat-no" title="statement not covered" >      customB</span>odyPadding = '0px'
+      customBodyHeight = '100vh'
+      break
+    de<span class="cstat-no" title="statement not covered" >fault:</span>
+<span class="cstat-no" title="statement not covered" >      node = &lt;span /&gt;</span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+  return (
+    &lt;M<span class="cstat-no" title="statement not covered" >odal</span>
+      heading={heading}
+      noHeader={noHeader}
+<span class="cstat-no" title="statement not covered" >      customDialogWidth={customDialogWidth}</span>
+      customBodyPadding={customBodyPadding}
+      customBodyHeight={customBodyHeight}
+    &gt;
+<span class="cstat-no" title="statement not covered" >      {node}</span>
+    &lt;/<span class="cstat-no" title="statement not covered" >Modal&gt;</span>
+  )
+}
+<span class="cstat-no" title="statement not covered" ></span>
+ModalWrapper.propTypes = {
+  type: PropTypes.string,
+  hide<span class="cstat-no" title="statement not covered" >AfterTimeout: Prop</span>Types.func.isRequired,
+  opti<span class="cstat-no" title="statement not covered" >ons: Pr</span>opTypes.shape({ plusTest: PropTypes.bool }),
+}
+&nbsp;
+const <span class="cstat-no" title="statement not covered" >mapStateToProps = state =&gt; ({</span>
+  type: state.modal.modalType,
+  options: state.modal.options,
+})<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const <span class="cstat-no" title="statement not covered" >mapDispatchToProps = {</span>
+  hide<span class="cstat-no" title="statement not covered" >AfterTimeout: hideModalAfter</span>Timeout,
+}<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+export default connect(mapStateToProps, mapDispatchToProps)(ModalWrapper)
+<span class="cstat-no" title="statement not covered" ></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

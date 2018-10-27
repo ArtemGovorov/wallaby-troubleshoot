@@ -1,0 +1,42 @@
+{
+  "extends": ["tslint-config-standard", "tslint-config-prettier", "tslint-config-airbnb"],
+  "rules": {
+    "variable-name": false,
+    "semicolon": false,
+    "import-name": false,
+    "max-line-length": false,
+    "ter-arrow-parens": false,
+    "ter-indent": false,
+    "align": false,
+    "no-empty": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "never",
+          "typeLiterals": "ignore"
+        }
+      }
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules",
+      "app/assets/**/*",
+      "public/**/*",
+      "vendor/**/*",
+      "coverage/**/*",
+      "spec/**/*",
+      "package.json",
+      "app/javascript/packs/application.js",
+      "app/javascript/packs/server_rendering.js",
+      "**/*.json",
+      "tsconfig.json",
+      "tslint.json",
+      "**/*.md",
+      ".eslintrc.json"
+    ]
+  }
+}

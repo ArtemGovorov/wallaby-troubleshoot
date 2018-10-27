@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/organisms/Form.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/organisms</a> Form.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/77</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/61</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+<span class="cstat-no" title="statement not covered" >import { connect } from 'react-redux'</span>
+import DOMPurify from 'dompurify'
+import withReduxProvider from 'easybib/hocs/withReduxProvider'
+<span class="cstat-no" title="statement not covered" >import { typesRedirect } f</span>rom 'easybib/utils/utils'
+import { isManualForm } from 'easybib/utils/url'
+import { getS<span class="cstat-no" title="statement not covered" >ourceType } from 'easybib/reducers'</span>
+import Loading from 'easybib/components/Loading'
+import SearchSour<span class="cstat-no" title="statement not covered" >ceSmall from 'easybib/pages/Form/SearchSourceS</span>mall'
+&nbsp;
+import Button from<span class="cstat-no" title="statement not covered" > '../atoms/Button'</span>
+import SavingModal from '../molecules/SavingModal'
+import {<span class="cstat-no" title="statement not covered" ></span>
+  IconKeyboardArrowLeft,
+  IconKeyboardArrowRight,<span class="cstat-no" title="statement not covered" ></span>
+  IconAddCircle,
+  IconDelete,<span class="cstat-no" title="statement not covered" ></span>
+} from '../atoms/Icons'
+<span class="cstat-no" title="statement not covered" ></span>
+import {
+  fetchLegacyFor<span class="cstat-no" title="statement not covered" >mJS,</span>
+  initLegacyFormJS,
+  formSubmit,<span class="cstat-no" title="statement not covered" ></span>
+  unloadFormData,
+} from '../actions/action<span class="cstat-no" title="statement not covered" >s.form'</span>
+&nbsp;
+import { redir<span class="cstat-no" title="statement not covered" >ectToSearch } from '../actions/actions.redirects'</span>
+&nbsp;
+const FormButtons =<span class="cstat-no" title="statement not covered" > ({ citationIDExists }) =&gt; {</span>
+  const buttonText = {
+    back: cit<span class="cstat-no" title="statement not covered" >ationIDExists ? 'Back to m</span>y Citation List' : 'Back to Review',
+    next: citationIDExists ? 'Update Citation' : 'Complete Citation',
+  }<span class="cstat-no" title="statement not covered" ></span>
+  return (
+    &lt;div classNa<span class="cstat-no" title="statement not covered" >me="btn-wrapper"&gt;</span>
+      &lt;Button
+        t<span class="fstat-no" title="function not covered" >heme="tertiary"<span class="cstat-no" title="statement not covered" ></span></span>
+        size="lg"
+        o<span class="fstat-no" title="function not covered" >nClick={() =&gt; {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span>
+          window.history.back()
+        }<span class="fstat-no" title="function not covered" >}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span>
+        type="button"
+      &gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+        &lt;IconKeyboardArrowLeft /&gt;
+        {<span class="fstat-no" title="function not covered" >buttonText.back}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span>
+      &lt;/Button&gt;
+      &lt;Bu<span class="fstat-no" title="function not covered" >tton theme="p</span>rimary" size="lg" extraCss="complete-cit<span class="cstat-no" title="statement not covered" >ation" type="sub<span class="cstat-no" title="statement not covered" >mit"&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span>
+        {buttonText.next}
+        &lt;<span class="fstat-no" title="function not covered" >IconKeyboardArrowRight /&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span>
+      &lt;/Button&gt;
+    &lt;/div<span class="fstat-no" title="function not covered" >&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span>
+  )
+}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+&nbsp;
+FormButtons.propTy<span class="cstat-no" title="statement not covered" >pes = {<span class="fstat-no" title="function not covered" ></span></span>
+  citationIDExists: PropT<span class="cstat-no" title="statement not covered" >ypes.bool,</span>
+}<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+class Form extends Component {
+  state = {
+<span class="cstat-no" title="statement not covered" >    legacyFormJSInitialized: false,</span>
+  }
+&nbsp;
+  componentDidMount() {
+    this.props.fetchLegacyFormJS()
+    this.initForm()<span class="fstat-no" title="function not covered" ></span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+  componentDidUpdate() {
+    this.initForm()
+  }
+&nbsp;
+  componentWillUnmount() {
+    this.props.unloadFormData()
+  }
+&nbsp;
+  initForm = () =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!this.state.legacyFormJSInitialized &amp;&amp; this.props.html !== '') {</span>
+      // Once the form has initialized, it won't attempt to
+      // do so again
+      this.setState({ legacyFormJSInitialized: true })
+      // This html has to be appended to the document manually
+      // to guarantee it's presence in the DOM before the legacy form js
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>      // does DOM manipulations on it (and just because this.props.html</span>
+<span class="cstat-no" title="statement not covered" >      // is true, doesn't mean </span>it's necessarily available in the DOM yet)
+      this.formHTML.innerHTML = DOMPurify.sanitize(this.props.html)
+      this.<span class="fstat-no" title="function not covered" >props</span>.initLegacyFormJS()
+    }
+  }
+&nbsp;
+  handleSubmit = e =&gt; {
+<span class="cstat-no" title="statement not covered" >    e.preventDefault()</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    // unlock modal uses window.easybib_form_no_submit</span>
+    //<span class="cstat-no" title="statement not covered" > they use this to prevent subm</span>ission of the form,
+    // which they later do by manually triggering the submit
+    // button later.
+<span class="cstat-no" title="statement not covered" >    if (window.easybib_form_no_submit !== true) {</span>
+      this.props.formSubmit()
+    }
+  }
+&nbsp;
+  formHTMLRef = node =&gt; {
+    this.formHTML = node
+  }
+&nbsp;
+  render() {
+    const contentVisibility = this.props.html ? 'visible' : 'hidden'
+    const loaderVisibi<span class="fstat-no" title="function not covered" >lity =</span> this.props.html ? 'hidden' : 'visible'
+<span class="cstat-no" title="statement not covered" ></span>
+    return (
+      &lt;span&gt;
+        &lt;I<span class="cstat-no" title="statement not covered" >conAddCircle className="icon-add_circle hidden" /&gt;</span>
+        &lt;IconDelete className="icon-delete hidden" /&gt;
+        &lt;div style={{ visibility: contentVisibility }}&gt;
+          {this.props.showSearchComponent &amp;&amp; (
+            &lt;SearchSourceSmall type={this.props.type} onSearch={this.props.redirectTo} /&gt;
+          )}
+          &lt;form id="citation_form" onSubmit={this.handleSubmit} method="POST"&gt;
+            &lt;div className="form-wrapper"&gt;
+<span class="cstat-no" title="statement not covered" >              &lt;div className="form-outer"&gt;</span>
+                &lt;div id="form-inner"&gt;
+<span class="cstat-no" title="statement not covered" >                  &lt;div ref={this.formHTMLR</span>ef} /&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;SavingModal visible={this.props.modalVisible} /&gt;
+            &lt;FormButtons citationIDExists={this.props.citation.id} /&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        &lt;div style={{ visibi</span>lity: loaderVisibility }}&gt;
+          &lt;Loading message="One moment while we gather the info for your citation..." /&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+    )
+  }<span class="cstat-no" title="statement not covered" ></span>
+}<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+Form.propTypes = {
+  fetchLegacyFormJS: PropTypes.func,
+  initLegacyFormJS: PropTypes.func,
+  unloadFormData: PropTypes.func,
+  showSearchComponent: PropTypes.bool,
+  citation: PropTypes.<span class="fstat-no" title="function not covered" >shape(</span>{
+    id: <span class="cstat-no" title="statement not covered" >PropTypes.string,</span>
+    callback: PropTypes.func,
+    onSubmit: PropTypes.func,
+    links: PropTypes.shape({
+      me: PropTypes.string,
+<span class="cstat-no" title="statement not covered" >    }),</span>
+  }),
+  html: PropTypes.st<span class="fstat-no" title="function not covered" >ring,</span>
+  form<span class="cstat-no" title="statement not covered" >Submit: PropTypes.func,</span>
+  type<span class="cstat-no" title="statement not covered" >: PropTypes.strin</span>g,
+  redirectTo: PropTypes.func,
+  modalVisible: PropTypes.bool,
+}
+<span class="fstat-no" title="function not covered" ></span>
+const <span class="cstat-no" title="statement not covered" >mapStateToProps =</span> state =&gt; ({
+  html: state.form.html,
+  citation: state.citation,
+  type: getSourceType(state),
+  showSearchComponen<span class="fstat-no" title="function not covered" >t: !typesRedirect[sta</span>te.currentSourceType] &amp;&amp; isManualForm(),
+  moda<span class="cstat-no" title="statement not covered" >lVisible: state.modal.visible</span>,
+})
+&nbsp;
+const mapDispatchToProps = {
+  fetchLegacyFormJS,<span class="fstat-no" title="function not covered" ></span>
+  initLegacyFormJS,<span class="cstat-no" title="statement not covered" ></span>
+  redirectTo: redirectToSearc<span class="cstat-no" title="statement not covered" >h,</span>
+  unlo<span class="cstat-no" title="statement not covered" >adFormData,</span>
+  formSubmit,
+}
+&nbsp;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withReduxProvider(Form))
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/Style/UnlockProAdvert.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/Style</a> UnlockProAdvert.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import styled from 'styled-components'
+<span class="cstat-no" title="statement not covered" >import Button from 'easybib/components/Button'</span>
+import * as constants from 'easybib/constants'
+import { intentToSubCTA } from 'easybib/utils/gtm'
+<span class="cstat-no" title="statement not covered" >import Box from 'easybib/c</span>omponents/Box'
+import { FlexRow } from 'easybib/components/Flex'
+<span class="cstat-no" title="statement not covered" ></span>
+const Header = styled.h2`
+  color: ${props =&gt; prop<span class="cstat-no" title="statement not covered" >s.theme.colors.greyDark};</span>
+  font-size: ${props =&gt; props.theme.font.heading.size.md};
+  line-height:<span class="cstat-no" title="statement not covered" > ${props =&gt; props.theme.font.lineHeight.md};</span>
+  margin-top: 0;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const Trial<span class="cstat-no" title="statement not covered" >Button = styled(Button)`</span>
+  width: 200px;
+  margin-to<span class="cstat-no" title="statement not covered" >p: ${props =&gt; props.theme.spacing.lg};</span>
+`
+<span class="cstat-no" title="statement not covered" ></span>
+const DescLine = styled.div`
+  font-si<span class="fstat-no" title="function not covered" >ze: ${props =&gt; props.the</span>me.font<span class="cstat-no" title="statement not covered" >.text.size.md};<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span></span></span>
+  line-height: ${props =&gt; props.theme.font.lineHeight.lg};
+  color: <span class="fstat-no" title="function not covered" >${props =&gt; props.theme.</span>colors.<span class="cstat-no" title="statement not covered" >greyDark};</span>
+  margin-right: ${props =&gt; props.theme.spacing.sm};
+  margin-bottom: ${props =&gt;<span class="cstat-no" title="statement not covered" > props.theme.spacing.sm};<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  font-weight: 300;</span>
+  di<span class="cstat-no" title="statement not covered" >splay: inline-flex;</span>
+  position: relative;
+`
+&nbsp;
+cons<span class="cstat-no" title="statement not covered" >t Dot = styled.spa</span>n`
+  line-height: 21px;
+  color: ${props =&gt; props.theme.colors.greyLight};
+<span class="cstat-no" title="statement not covered" >  font-size: ${pr</span>ops =&gt; props.theme.font.text.size.xs};
+  margin-right: ${props =&gt; props.theme.spacing.sm};
+`
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+co<span class="cstat-no" title="statement not covered" >nst Root = styled.article`</span>
+  b<span class="fstat-no" title="function not covered" >ac</span>kground-color: ${props =&gt; props.theme.colors.white};
+<span class="cstat-no" title="statement not covered" >  margin-top: ${props =&gt; props.theme.spacin</span>g.lg};
+  p<span class="fstat-no" title="function not covered" >ad</span>ding: 48px;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const Image = styled.img.attrs({
+  src: '/v2/images<span class="cstat-no" title="statement not covered" >/eb-star-books.svg',<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  alt: 'Stack of books',</span>
+})`
+  @media only screen and (max-width: 520px) {
+    display: no<span class="cstat-no" title="statement not covered" >ne;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+`<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+con<span class="fstat-no" title="function not covered" >st</span> UnlockProAdvert: React.SFC&lt;{}&gt; = () =&gt; (
+<span class="cstat-no" title="statement not covered" >  &lt;Root&gt;</span>
+<span class="fstat-no" title="function not covered" >    &lt;</span>FlexRow&gt;
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+<span class="fstat-no" title="function not covered" ></span>        &lt;Box marginBottom={4}&gt;
+<span class="cstat-no" title="statement not covered" >          &lt;Header&gt;Step up your ci</span>tation game with EasyBib Plus&lt;/Header&gt;
+        &lt;/Box&gt;
+        &lt;DescLine&gt;
+<span class="cstat-no" title="statement not covered" >          &lt;Dot&gt;&amp;#9679;&lt;/Dot&gt; APA, Chicago, and thousands of other styles<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        &lt;/DescLine&gt;</span>
+<span class="fstat-no" title="function not covered" ></span>        &lt;DescLine&gt;
+<span class="cstat-no" title="statement not covered" >          &lt;Dot&gt;&amp;#9679;&lt;/Dot&gt; Ad-free exp</span>erience
+<span class="fstat-no" title="function not covered" ></span>        &lt;/DescLine&gt;
+<span class="cstat-no" title="statement not covered" >        &lt;DescLine&gt;</span>
+          &lt;Dot&gt;&amp;#9679;&lt;/Dot&gt; Create in-text citations and footnotes
+        &lt;/DescLine&gt;
+        &lt;De<span class="cstat-no" title="statement not covered" >scLine&gt;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >          &lt;Dot&gt;&amp;#9679;&lt;/Dot&gt; Cancel</span> any time
+<span class="fstat-no" title="function not covered" ></span>        &lt;/DescLine&gt;
+<span class="cstat-no" title="statement not covered" >        &lt;TrialButton onClick={int</span>entToSubCTA} lightGray href={constants.PRICING_PATH}&gt;
+          Start a trial now
+        &lt;/TrialButton&gt;
+      &lt;/div&gt;<span class="cstat-no" title="statement not covered" ></span>
+      &lt;Image /&gt;
+    &lt;/FlexRow&gt;
+  &lt;/Root&gt;
+)
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+ex<span class="cstat-no" title="statement not covered" >port default UnlockProAdvert</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

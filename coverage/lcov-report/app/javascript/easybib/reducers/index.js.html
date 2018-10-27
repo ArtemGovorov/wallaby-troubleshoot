@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/reducers/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/reducers</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.55% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/9</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { combineReducers } from 'redux'
+// import { routerReducer } from 'react-router-redux'
+import { projectsReducer } from 'redux-citation-api'
+import { loadingReducer } from '@chegg/redux-loading-queue'
+import citationsReducer from 'easybib/reducers/citations'
+import citationReducer from 'easybib/reducers/citation'
+<span class="fstat-no" title="function not covered" >import formReducer from 'easybib/reducers/form'</span>
+<span class="fstat-no" title="function not covered" >import userReducer from 'easybib/reducers/user'</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import stylesReducer from 'easybib/reducers/styles'</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import stylesSearchReducer from 'easybib/reducers/stylesSearch'</span></span>
+<span class="fstat-no" title="function not covered" >import typesReducer from 'easybib/reducers/types'</span>
+<span class="cstat-no" title="statement not covered" >import sourcesReducer from 'easybib/reducers/sources'</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import searchReducer from 'easybib/reducers/search'</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import modalReducer from 'easybib/reducers/modal'</span></span>
+import errorReducer from 'easybib/reducers/error'
+import pageNotFoundReducer from 'easybib/reducers/pageNotFound'
+import showProPaywallReducer from 'easybib/reducers/showProPaywall'
+import appReducer from 'easybib/reducers/app'
+import searchDataReducer from 'easybib/reducers/searchData'
+import projectIDReducer from 'easybib/reducers/projectID'
+import currentSourceTypeReducer from 'easybib/reducers/currentSourceType'
+import cellReducer from 'easybib/reducers/cell'
+import currentCitationStyleReducer from 'easybib/reducers/currentCitationStyle'
+import currentProjectReducer from 'easybib/reducers/currentProject'
+import adLoaderReducer from 'easybib/reducers/adLoader'
+&nbsp;
+// Selectors TODO: move these into a separate file?
+export const getCitationStyle = state =&gt; state.currentCitationStyle
+export const getSourceType = state =&gt; state.currentSourceType
+export const getCurrentProjectID = state =&gt; state.currentProject
+export const getProjects = state =&gt; state.projects
+export const getCitations = state =&gt; state.citations
+export const getSelectedCitationID = state =&gt; state.citation
+&nbsp;
+export const getSourceTypeTitle = state =&gt; {
+  const typeMatch = state.types.find(
+    stateType =&gt; stateType.value === getSourceType(state)
+  )
+  return typeMatch ? typeMatch.title : null
+}
+&nbsp;
+export const getProject = (state, projectID) =&gt; {
+  const projects = getProjects(state)
+  return projects.find(project =&gt; project.id === projectID)
+}
+&nbsp;
+export const getCurrentProject = state =&gt; {
+  const currentProjectID = getCurrentProjectID(state)
+  return getProject(state, currentProjectID)
+}
+&nbsp;
+export const getSelectedCitation = state =&gt; {
+  const selectedCitationID = getSelectedCitationID(state)
+  const citations = getCitations(state)
+  return citations.find(citation =&gt; citation.id === selectedCitationID)
+}
+&nbsp;
+export const getSelectedCitations = state =&gt; {
+  const citations = getCitations(state)
+  return citations.filter(citation =&gt; citation.selected)
+}
+&nbsp;
+const reducers = combineReducers({
+  app: appReducer, // All pages
+  projectID: projectIDReducer,
+  currentCitationStyle: currentCitationStyleReducer,
+  currentSourceType: currentSourceTypeReducer,
+  currentProject: currentProjectReducer,
+  citation: citationReducer, // FormPage, EvalPage, BibliographyPage
+  citations: citationsReducer, // BibliographyPage
+  projects: projectsReducer,
+  error: errorReducer,
+  pageNotFound: pageNotFoundReducer,
+  form: formReducer,
+  loading: loadingReducer,
+  modal: modalReducer,
+  showProPaywall: showProPaywallReducer,
+  search: searchReducer,
+  searchData: searchDataReducer,
+  adLoader: adLoaderReducer,
+  sources: sourcesReducer,
+  styles: stylesReducer,
+  stylesSearch: stylesSearchReducer,
+  types: typesReducer,
+  user: userReducer,
+  cell: cellReducer,
+})
+&nbsp;
+export default reducers
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

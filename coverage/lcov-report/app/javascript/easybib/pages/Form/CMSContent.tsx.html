@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/Form/CMSContent.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/Form</a> CMSContent.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import styled from 'styled-components'
+<span class="cstat-no" title="statement not covered" >import { FlexRow } from 'easybib/components/Flex'</span>
+import Box from 'easybib/components/Box'
+import { H3, H5 } from 'easybib/components/Heading'
+<span class="cstat-no" title="statement not covered" >import { Header, Body } fr</span>om 'easybib/components/Styled'
+&nbsp;
+const Questio<span class="cstat-no" title="statement not covered" >nUL = styled.ul`</span>
+  margin-bottom: 0;
+  padding: 0;<span class="cstat-no" title="statement not covered" ></span>
+  li {
+    margin-l<span class="cstat-no" title="statement not covered" >eft: 30px;</span>
+  }
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const ContentHe<span class="cstat-no" title="statement not covered" >ading = styled(H3)`</span>
+  text-align: center;
+`<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const CMS<span class="fstat-no" title="function not covered" >Content: React.SFC&lt;{}&gt; </span>= () =&gt;<span class="cstat-no" title="statement not covered" > (</span>
+  &lt;div className="cms-content results"&gt;
+    &lt;div className="contain<span class="cstat-no" title="statement not covered" >er-fluid" id="content-addition"&gt;<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >      &lt;Box marginBottom={4} marginTop={6}&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;ContentHeading&gt;Form Glossary&lt;/ContentHeading&gt;</span>
+      &lt;/Box&gt;
+      &lt;div className="row"&gt;
+        {[
+<span class="cstat-no" title="statement not covered" >          {</span>
+            header: 'Annotation',
+            bodyHeader:
+<span class="cstat-no" title="statement not covered" >              'Ad</span>ditional notes or comments. For citations, annotations usually include a brief description of the content and what you think of it.',
+          },
+          {
+            heade<span class="cstat-no" title="statement not covered" >r: 'Date Accessed',</span>
+            bodyHeader:
+              'Date (<span class="cstat-no" title="statement not covered" >day, month, and/or year) the source was accessed or viewed online.',</span>
+          },
+          {<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >            header: 'Electronically Published',</span>
+            bodyHeader:
+              'When the source was electronically published. Sometimes, the date is not readily available.',
+          },
+          {
+            header: 'Place of Publication',
+            bodyHeader:
+              'Name of the city, state or country where the publisher of a source is located. For written sources, this can usually be found on the title page. It is not always required, depending on the style.',
+          },
+          {
+            header: 'Publisher or Sponsor',
+            bodyHeader:
+              'The organization, company, individual, or other entity that published, sponsored, or issued the content.',
+          },
+          {
+            header: 'Suffix',
+            bodyHeader:
+              'In the citation forms, this refers to any additions to the end of a name that tells us more information about the contributor. Examples: Jr., Sr., II, III, Esq., etc.',
+          },
+          {
+            header: 'Title',
+            bodyHeader:
+              'What a source is called or its name. In the absence of a title, some styles may ask for a summary of the source.',
+          },
+          {
+            header: 'URL',
+            bodyHeader:
+              'The address of a web page. URL is short for Uniform Resource Locator. Example: www.easybib.com',
+          },
+          {
+            header: 'Medium',
+            bodyHeader:
+              'Way the content or information is communicated, shared, or published. Below are examples for two source types.',
+            body: [
+              'E-book: Other: PDF, JPEG file, Powerpoint, etc.',
+              'Painting/Artwork: Graphite on paper, Marble, Oil on canvas, etc.',
+            ],
+          },
+          {
+            header: 'Contributor',
+            bodyHeader:
+              'Person or organization that assisted in creating content, a performance, or a resource. Examples include a translator, book editor, screenwriter, singer, etc.',
+          },
+          {
+<span class="fstat-no" title="function not covered" ></span>            header: 'Author',
+<span class="cstat-no" title="statement not covered" >            bodyHeader:</span>
+              'Someone who was the originator and creator of content. An author is usually tied to written content (e.g. book, article, play, etc.), but sometimes relates to a digital image, comic, or podcast.',
+          },
+        ].map(question =&gt; (
+          &lt;FlexRow key={question.header}&gt;
+            &lt;Header&gt;
+              &lt;Box margin={3}&gt;<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                &lt;H5&gt;{question.header}&lt;/H5&gt;</span>
+              &lt;/Box&gt;
+            &lt;/Header&gt;
+            &lt;Body&gt;
+              &lt;Box margin={3}&gt;
+                &lt;QuestionUL&gt;
+                  &lt;p&gt;{question.bodyHeader}&lt;/p&gt;
+<span class="cstat-no" title="statement not covered" >                  {questio</span>n.body &amp;&amp; question.body.map(item =&gt; &lt;li key={item}&gt;{item}&lt;/li&gt;)}
+<span class="cstat-no" title="statement not covered" >                &lt;/QuestionUL</span>&gt;
+              &lt;/Box&gt;
+            &lt;/Body&gt;
+          &lt;/FlexRow&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+)
+&nbsp;
+export default CMSContent
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

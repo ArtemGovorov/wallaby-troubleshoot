@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/javascript/easybib/pages/Bibliography/CMSContent.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">app/javascript/easybib/pages/Bibliography</a> CMSContent.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import { FlexRow } from 'easybib/components/Flex'
+<span class="cstat-no" title="statement not covered" >import Box from 'easybib/components/Box'</span>
+import { H3, H5 } from 'easybib/components/Heading'
+import Link from 'easybib/components/Link'
+<span class="cstat-no" title="statement not covered" >import { Header, Body } fr</span>om 'easybib/components/Styled'
+import styled from 'styled-components'
+<span class="cstat-no" title="statement not covered" ></span>
+const ContentHeading = styled(H3)`
+  text-align<span class="cstat-no" title="statement not covered" >: center;</span>
+`
+<span class="cstat-no" title="statement not covered" ></span>
+const CMSContent = () =&gt; (
+  &lt;div classNam<span class="cstat-no" title="statement not covered" >e="cms-content results"&gt;</span>
+    &lt;div className="container-fluid" id="content-addition"&gt;
+      &lt;Box m<span class="cstat-no" title="statement not covered" >arginBottom={4} marginTop={6}&gt;</span>
+        &lt;ContentHeading&gt;What’s Next?&lt;/ContentHeading&gt;
+      &lt;/Box&gt;<span class="cstat-no" title="statement not covered" ></span>
+      &lt;div className="row"&gt;
+        {[<span class="cstat-no" title="statement not covered" ></span>
+          {
+<span class="fstat-no" title="function not covered" >            header: 'Citation Gu</span>ides',<span class="cstat-no" title="statement not covered" ></span>
+            body: (
+              &lt;div&gt;<span class="cstat-no" title="statement not covered" ></span>
+                Learn how to clearly cite with our{' '}
+                &lt;Link
+                  fontSize="inherit"
+                  blue
+<span class="cstat-no" title="statement not covered" >                  href="ht<span class="fstat-no" title="function not covered" >tp://www.ea</span>sybib.com/guides/?from=nav"</span>
+<span class="cstat-no" title="statement not covered" >                &gt;</span>
+                  citation guides
+                &lt;/Link&gt;{' '}
+                on MLA, APA, and Chicago citation styles. See the basics of each style, as
+                well as real examples for you to learn from.
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Writing Guides',
+            body: (
+              &lt;div&gt;
+                Find breakdowns on the different steps of the{' '}
+                &lt;Link
+                  fontSize="inherit"
+                  blue
+                  href="http://www.easybib.com/guides/students/"
+                &gt;
+                  writing process
+                &lt;/Link&gt;
+                . With tips on brainstorming to structuring arguments to revising, you’ll
+                learn how to make a killer paper.
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Add Annotations',
+            body: (
+              &lt;div&gt;
+                Every citation form has a spot for you to include an annotation. Go to the
+                citation form and look at the bottom of the page under “More options.”
+                Don't know what to write? Start by reading{' '}
+                &lt;Link
+                  fontSize="inherit"
+                  blue
+                  href="http://www.easybib.com/guides/annotated-bibliographies/"
+                &gt;
+                  this guide
+                &lt;/Link&gt;
+                .
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Evaluate Your Sources',
+            body: (
+              &lt;div&gt;
+                Citations won't save your grade if your sources are untrustworthy. Always
+                take a moment to consider the credibility of what you are citing.{' '}
+                &lt;Link
+                  fontSize="inherit"
+                  blue
+                  href="http://www.easybib.com/guides/students/research-guide/evaluating-sources-2/"
+                &gt;
+                  Here are guides
+                &lt;/Link&gt;{' '}
+                to help.
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Finish With a Title Page',
+            body: (
+              &lt;div&gt;
+                Every good paper needs a title page. Don’t know how to create one? No
+                problem! We have a quick{' '}
+                &lt;Link
+                  fontSize="inherit"
+                  blue
+                  href="http://titlepage.easybib.com/?utm_source=easybib&amp;utm_medium=navigation&amp;utm_campaign=product"
+                &gt;
+                  Title Page creator
+<span class="fstat-no" title="function not covered" ></span>                &lt;/Link&gt;{' '}
+<span class="cstat-no" title="statement not covered" >                for you.</span>
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Easy In-text Citations',
+            body: (
+              &lt;div&gt;
+                Under every citation is a link to our in-text citation tools. Simply click
+                "parenthetical" or "footnote" to bring up the feature and begin creating
+<span class="cstat-no" title="statement not covered" >                in-text ci</span>tations!
+<span class="cstat-no" title="statement not covered" >              &lt;/div&gt;</span>
+            ),
+          },
+          {
+            header: 'Select the Source Type',
+            body: (
+              &lt;div&gt;
+                Cite correctly from the beginning! Look at our list of 50+ source types,
+                choose what best describes your source, and fill out the citation form.
+                It’s that simple.
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Find Your Citation Style',
+            body: (
+              &lt;div&gt;
+                We always have MLA, but APA, Chicago/Turabian and over 7,000 additional
+                citations styles are available with an EasyBib Plus subscription. Learn{' '}
+                &lt;Link fontSize="inherit" blue href="https://www.easybib.com/upgrade"&gt;
+                  more here
+                &lt;/Link&gt;
+                .
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Blog Spot',
+            body: (
+              &lt;div&gt;
+                &lt;Link fontSize="inherit" blue href="http://www.easybib.com/guides/blog/"&gt;
+                  Our blog
+                &lt;/Link&gt;{' '}
+                is the place to be for tips on how to be a better writer, citing fun
+                sources, and info on the latest updates. Check it out today!
+              &lt;/div&gt;
+            ),
+          },
+          {
+            header: 'Get Extra Support',
+            body: (
+              &lt;div&gt;
+                Visit our{' '}
+                &lt;Link
+                  fontSize="inherit"
+                  blue
+                  href="http://support.easybib.com/?Website=External"
+                &gt;
+                  EasyBib Support Center
+                &lt;/Link&gt;{' '}
+                for help getting started, answers to registration questions, and general
+                account information.
+              &lt;/div&gt;
+            ),
+          },
+        ].map(question =&gt; (
+          &lt;FlexRow key={question.header}&gt;
+            &lt;Header&gt;
+              &lt;Box margin={3}&gt;
+                &lt;H5&gt;{question.header}&lt;/H5&gt;
+              &lt;/Box&gt;
+            &lt;/Header&gt;
+            &lt;Body&gt;
+              &lt;Box margin={3}&gt;{question.body}&lt;/Box&gt;
+            &lt;/Body&gt;
+          &lt;/FlexRow&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+)
+&nbsp;
+export default CMSContent
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 27 2018 01:13:23 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>
